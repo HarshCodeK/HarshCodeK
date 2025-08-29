@@ -104,54 +104,6 @@ learning_progress = {
 
 ---
 
-## 🚀 Featured Projects
-
-<div align="center">
-
-### 🤖 Autonomous Navigation Robot
-[![Repo](https://img.shields.io/badge/Repository-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername/autonomous-navigation-robot)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![ROS](https://img.shields.io/badge/ROS-22314E?style=for-the-badge&logo=ros&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
-
-> Developed an intelligent navigation system using ROS2, implementing SLAM for mapping and path planning algorithms for autonomous movement in complex environments.
-
----
-
-### 🎯 Real-time Object Detection System
-[![Repo](https://img.shields.io/badge/Repository-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername/realtime-object-detection)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
-
-> Built a high-performance object detection pipeline using YOLOv8, achieving 95%+ accuracy with real-time processing capabilities for robotics applications.
-
----
-
-### 🧠 Reinforcement Learning Agent
-[![Repo](https://img.shields.io/badge/Repository-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername/rl-robotics-agent)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![OpenAI Gym](https://img.shields.io/badge/OpenAI%20Gym-0081A5?style=for-the-badge&logoColor=white)
-
-> Implemented Deep Q-Network (DQN) agent for robotic arm control, optimizing pick-and-place operations with 40% improvement in task completion time.
-
-</div>
-
----
-
-## 🤝 Connect & Collaborate
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/harsh-kharavle-422932284)
-[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)]([[https://medium.com/subscribe/@harsh.kharavle]])
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://yourportfolio.com)
-
-</div>
-
----
-
 ## 📊 Activity Graph
 
 <div align="center">
