@@ -131,6 +131,4 @@ learning_progress = {
 
 ---
 
-<sub>🤖 This README is automatically updated with the latest project information</sub>
-
 </div>
