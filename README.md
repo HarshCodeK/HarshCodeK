@@ -30,7 +30,7 @@
 
 ### 🤖 AI & Machine Learning
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,sckitlearn" />
+  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch" />
   <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" />
   <img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white" />
   <img src="https://img.shields.io/badge/OpenCV-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" />
