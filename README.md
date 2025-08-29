@@ -140,47 +140,12 @@ learning_progress = {
 
 ---
 
-## 📈 Current Learning Goals
-
-<div align="center">
-
-| 🎯 Focus Area | 📊 Progress | 🎯 Target Date |
-|---------------|-------------|----------------|
-| **Advanced Computer Vision** | ████████░░ 80% | Q2 2024 |
-| **ROS2 Navigation Stack** | ██████░░░░ 60% | Q3 2024 |
-| **Edge AI Deployment** | █████░░░░░ 50% | Q4 2024 |
-| **Robotics Simulation** | ███████░░░ 70% | Q3 2024 |
-
-</div>
-
----
-
-## 🎓 Certifications & Learning Resources
-
-<div align="center">
-
-### 📜 Completed Certifications
-- **🏆 Machine Learning Specialization** - Stanford University (Coursera)
-- **🤖 ROS for Beginners** - The Construct
-- **👁️ Computer Vision Nanodegree** - Udacity
-- **☁️ AWS Machine Learning Specialty** - Amazon Web Services
-
-### 📚 Currently Pursuing
-- **🧠 Deep Learning Specialization** - deeplearning.ai
-- **🤖 Advanced Robotics** - edX
-- **🚀 MLOps Engineering** - Coursera
-
-</div>
-
----
-
 ## 🤝 Connect & Collaborate
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)
-[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@yourhandle)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/harsh-kharavle-422932284)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)]([[https://medium.com/subscribe/@harsh.kharavle]])
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://yourportfolio.com)
 
 </div>
