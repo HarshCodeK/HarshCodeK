@@ -25,7 +25,7 @@
 
 ### 💻 Programming Languages
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,js,typescript,bash,matlab" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,matlab" />
 </div>
 
 ### 🤖 AI & Machine Learning
