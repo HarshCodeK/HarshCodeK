@@ -30,7 +30,7 @@
 
 ### 🤖 AI & Machine Learning
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch" />
+  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,sckitlearn" />
   <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" />
   <img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white" />
   <img src="https://img.shields.io/badge/OpenCV-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" />
@@ -40,7 +40,6 @@
 
 ### 🤖 Robotics & Systems
 <div align="center">
-  <img src="https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white" />
   <img src="https://img.shields.io/badge/ROS2-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white" />
   <img src="https://img.shields.io/badge/Gazebo-%23FF6600.svg?style=for-the-badge&logo=gazebo&logoColor=white" />
   <img src="https://img.shields.io/badge/RViz-%23FF6600.svg?style=for-the-badge&logoColor=white" />
