@@ -1,6 +1,6 @@
 # Harsh Paresh Kharavle
 
-**`Python Developer | AI & ML Enthusiast | VIC Coding`**
+**`Python Developer | AI & ML Enthusiast | VIBE Coding`**
 
 Building intelligent systems — from voice agents and RAG pipelines to multi-agent AI architectures and multimodal applications.
 
