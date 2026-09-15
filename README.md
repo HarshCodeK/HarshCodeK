@@ -16,11 +16,11 @@ Systems where trust is engineered, not claimed. Where the LLM can triage but can
 
 ## The one-liner
 
-> I don't build AI wrappers. I build **control planes** ??? systems where AI does what it's good at, and is structurally prevented from doing what it shouldn't.
+> I don't build AI wrappers. I build **control planes** â€” systems where AI does what it's good at, and is structurally prevented from doing what it shouldn't.
 
 ---
 
-## Pinned Repositories
+## S-Tier â€” Flagships
 
 <table>
 <tr>
@@ -39,39 +39,94 @@ Normalizes transactions from 5 sources, auto-matches with rule engine + Jaccard 
 </td>
 <td width="50%" valign="top">
 
-### <a href="https://github.com/HarshCodeK/proofsheet">proofsheet</a>
+### <a href="https://github.com/HarshCodeK/megaproject">megaproject</a>
 
-**Verifiable engineering evidence for any repository.**
+**Unified AI agent OS built from 5 separate AI systems.**
 
-Point it at a repo and it returns an evidence sheet ??? what's tested, what's documented, what would break ??? with a file:line citation for every claim. The portfolio proves itself with the tool it ships.
+Voice meeting agent, multi-model code orchestrator, RAG enterprise chatbot, hybrid log classifier, and financial voice agent â€” all wired into a single agent OS through a plugin architecture. One runtime, five capabilities.
 
-`Python` `FastAPI` `Pydantic` `deterministic`
+`TypeScript` `Python` `FastAPI` `Realtime` `5 plugins`
 
-**The invariant:** *A claim without a file citation is not a claim.*
+**The invariant:** *One system, five capabilities, zero duplicated infrastructure.*
 
 </td>
 </tr>
+</table>
+
+---
+
+## A-Tier â€” Cross-Domain
+
+<table>
 <tr>
 <td width="50%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/fiduciary">fiduciary</a>
+
+**Trust layer for agentic commerce.**
+
+AI buyer agent searches a catalog and pays on Razorpay â€” but every money action passes through a control plane the agent cannot bypass. 5 components: effective-price engine, idempotency guard, HMAC consent tokens, hash-chained audit, signed receipts. 6 demo scenarios.
+
+`TypeScript` `Fastify` `Razorpay test-mode` `HMAC` `SHA-256`
+
+**The invariant:** *The model is untrusted. The control plane is trusted.*
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/kay-kay">kay-kay</a>
+
+**Universal AI operating layer.**
+
+OpenAI-compatible gateway that routes, observes, and accounts for AI workloads â€” model-agnostic by design. Drop-in: change `base_url` + `api_key` and existing apps get provider fallback, telemetry, and cost tracking. 4-chapter roadmap: Connect â†’ Optimize â†’ Operate â†’ Govern.
+
+`Python` `FastAPI` `SQLite` `OpenAI-compatible` `4-chapter roadmap`
+
+**The invariant:** *We do not build AI. We decide how a company's software should use AI.*
+
+</td>
+</tr>
+</table>
+
+---
+
+## B-Tier â€” Supporting
+
+<table>
+<tr>
+<td width="33%" valign="top">
 
 ### <a href="https://github.com/HarshCodeK/regent">regent</a>
 
 **LLM gateway with integer micro-USD cost accounting.**
 
-One OpenAI-compatible endpoint that routes to providers, records every call in an append-only ledger, and enforces budgets. Stub runs offline with zero credentials. 32 tests, 99% coverage.
+One OpenAI-compatible endpoint that routes to providers, records every call in an append-only ledger, and enforces budgets. 32 tests, 99% coverage.
 
 `Python` `FastAPI` `SQLite` `32 tests` `99% coverage`
 
 **The invariant:** *Every call is accounted for. Unknown price is flagged, not guessed.*
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/proofsheet">proofsheet</a>
+
+**Verifiable engineering evidence for any repository.**
+
+Point it at a repo and it returns an evidence sheet â€” what's tested, what's documented, what would break â€” with a file:line citation for every claim.
+
+`Python` `FastAPI` `Pydantic` `deterministic`
+
+**The invariant:** *A claim without a file citation is not a claim.*
+
+</td>
+<td width="33%" valign="top">
 
 ### <a href="https://github.com/HarshCodeK/aegis">aegis</a>
 
 **Autonomous customer resolution agent with trust protocol.**
 
-Every action passes through: policy check ??? dry-run ??? commit ??? verify ??? auto-rollback on failure. Hand-rolled agent loop ??? no LangChain, no framework. Built at IIT Bhubaneswar hackathon.
+Every action passes through: policy check â†’ dry-run â†’ commit â†’ verify â†’ auto-rollback on failure. Hand-rolled agent loop â€” no LangChain, no framework. Built at IIT Bhubaneswar hackathon.
 
 `TypeScript` `Next.js 16` `Gemini API` `chaos injection`
 
@@ -80,30 +135,30 @@ Every action passes through: policy check ??? dry-run ??? commit ??? verify ??? 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### <a href="https://github.com/HarshCodeK/holdfast">holdfast</a>
 
 **Booking API where double-booking is structurally impossible.**
 
-Three layers of defence: idempotency keys, guarded transactions with `select_for_update`, and partial unique database constraints. Contention harness fires parallel requests and proves zero double-bookings.
+Three layers of defence: idempotency keys, guarded transactions with `select_for_update`, and partial unique database constraints. Zero double-bookings under contention.
 
 `Python` `Django` `DRF` `SQLite` `Postgres-ready`
 
 **The invariant:** *For a given resource and slot, exactly one hold wins.*
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top" colspan="2">
 
 ### <a href="https://harshkharavle.github.io">harshkharavle.github.io</a>
 
-**This site. The portfolio is itself a system.**
+**The portfolio is itself a system.**
 
-Case studies, evidence wall, and resume ??? all generated from each repository's own measured numbers. No metric on this page is typed by hand. Zero framework dependencies.
+Case studies, evidence wall, and resume â€” all generated from each repository's own measured numbers. No metric on this page is typed by hand. Zero framework dependencies.
 
 `HTML` `CSS` `JS` `GitHub Pages` `zero framework`
 
-**The invariant:** *Every number traces to a repository's EVIDENCE.json.*
+**The invariant:** *Every number traces to a repository's evidence.*
 
 </td>
 </tr>
@@ -115,7 +170,8 @@ Case studies, evidence wall, and resume ??? all generated from each repository's
 
 | Metric | Value | Source |
 |---|---|---|
-| repos on profile | **6** | `gh repo list HarshCodeK` |
+| repos on profile | **9** | `gh repo list HarshCodeK` |
+| active repos | **9** | all unarchived |
 | tests (recoup) | **153 passing** | `python -m pytest` in recoup |
 | tests (regent) | **32 passing, 99% coverage** | `python -m pytest --cov=src` in regent |
 | tests (proofsheet) | **9 passing** | `python -m pytest` in proofsheet |
@@ -127,10 +183,10 @@ Case studies, evidence wall, and resume ??? all generated from each repository's
 ## How I work
 
 ```
-deployed beats described    ??? every repo has a landing page and dashboard
-a number or it did not happen ??? EVIDENCE.md with reproduce commands
-tradeoffs are the deliverable ??? TRADEOFFS.md in every repo
-explainable or excluded      ??? EXPLAIN.md + AGENTS.md per repo
+deployed beats described    â€” every repo has a landing page and dashboard
+a number or it did not happen â€” EVIDENCE.md with reproduce commands
+tradeoffs are the deliverable â€” TRADEOFFS.md in every repo
+explainable or excluded      â€” EXPLAIN.md + AGENTS.md per repo
 ```
 
 ---
@@ -138,7 +194,7 @@ explainable or excluded      ??? EXPLAIN.md + AGENTS.md per repo
 ## Tech I actually use
 
 **Languages:** Python, TypeScript, SQL
-**Backend:** FastAPI, Django, DRF
+**Backend:** FastAPI, Django, DRF, Fastify
 **Frontend:** React, Next.js, HTML/CSS/JS (vanilla)
 **Data:** SQLite, PostgreSQL, ChromaDB
 **AI/ML:** Groq, Gemini, sentence-transformers, scikit-learn
@@ -161,4 +217,3 @@ explainable or excluded      ??? EXPLAIN.md + AGENTS.md per repo
 *"Implementation became abundant. What is scarce is judgement."*
 
 </div>
-
