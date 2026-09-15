@@ -52,7 +52,7 @@
     Deterministic and offline: two runs on the same commit produce the same sheet.</li>
     <li><span class="role">holdfast - reservations that hold</span> <span class="meta">Python, Django, DRF</span><br>
     A booking service whose invariant (one slot, one confirmed holder) is enforced in the database and
-    attacked on purpose by a contention harness that runs in CI.</li>
+    its contention harness - the proof that runs in CI - is the current milestone.</li>
     <li><span class="role">paperlane - real-time support desk</span> <span class="meta">Node, WebSocket</span><br>
     Every ticket carries a live SLO countdown; the dashboard forecasts which queue breaches first.</li>
     <li><span class="role">daybook, wardround, seamline, timetruth, signalroom</span> <span class="meta">Python, FastAPI</span><br>

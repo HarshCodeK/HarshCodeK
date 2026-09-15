@@ -7,7 +7,7 @@ import { runMetrics } from "../src/bench.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-const t = spawnSync("npm", ["test"], { cwd: ROOT, encoding: "utf8" });
+const t = spawnSync(process.execPath, ["--test"], { cwd: ROOT, encoding: "utf8" });
 const out = (t.stdout || "") + (t.stderr || "");
 const pass = /pass (\d+)/.exec(out);
 const fail = /fail (\d+)/.exec(out);

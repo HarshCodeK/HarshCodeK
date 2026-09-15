@@ -2,4 +2,12 @@
 
 Every line below is generated from a repository's own EVIDENCE.json.
 
-- regent (S tier, AI infrastructure): 0 tests passing; source: C:\Desktop\regent\EVIDENCE.json
+- daybook (F tier, fintech / micro-merchant): 2 tests passing; source: C:\Desktop\daybook\EVIDENCE.json
+- holdfast (L tier, reservations / backend engineering): 0 tests passing; source: C:\Desktop\holdfast\EVIDENCE.json
+- paperlane (L tier, operations / real-time web): 1 tests passing; source: C:\Desktop\paperlane\EVIDENCE.json
+- proofsheet (S tier, developer tooling): 2 tests passing; source: C:\Desktop\proofsheet\EVIDENCE.json
+- regent (S tier, AI infrastructure): 32 tests passing; source: C:\Desktop\regent\EVIDENCE.json
+- seamline (F tier, education): 2 tests passing; source: C:\Desktop\seamline\EVIDENCE.json
+- signalroom (F tier, product strategy / market intelligence): 2 tests passing; source: C:\Desktop\signalroom\EVIDENCE.json
+- timetruth (F tier, transportation / open data): 2 tests passing; source: C:\Desktop\timetruth\EVIDENCE.json
+- wardround (F tier, healthcare): 2 tests passing; source: C:\Desktop\wardround\EVIDENCE.json
