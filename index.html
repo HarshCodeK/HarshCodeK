@@ -43,6 +43,21 @@
       <a class="btn primary" href="resume.html">Resume <span class="arrow">→</span></a>
       <a class="btn" href="https://github.com/HarshCodeK">github.com/HarshCodeK</a>
     </div>
+
+    <div class="hero-stats" style="margin-top:48px">
+      <div class="stat-group">
+        <span class="stat-num" id="stat-repos">9</span>
+        <span class="stat-label">repositories</span>
+      </div>
+      <div class="stat-group">
+        <span class="stat-num" id="stat-tests">200+</span>
+        <span class="stat-label">tests passing</span>
+      </div>
+      <div class="stat-group">
+        <span class="stat-num" id="stat-tiers">99%</span>
+        <span class="stat-label">evidence verified</span>
+      </div>
+    </div>
   </div>
 
   <!-- ═══ EVIDENCE WALL ═══ -->
@@ -55,15 +70,25 @@
 
   <!-- ═══ WORK ═══ -->
   <section id="work">
-    <h2>Work</h2>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+      <h2 style="margin-bottom:0">Work</h2>
+      <div class="tier-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="S">S — Flagships</button>
+        <button class="filter-btn" data-filter="A">A — Cross-Domain</button>
+        <button class="filter-btn" data-filter="B">B — Supporting</button>
+      </div>
+    </div>
     <p class="sub">Nine repositories, one standard. Each has a single governing invariant, measured proof, and a story
     that can be explained cold on a whiteboard.</p>
 
     <!-- S TIER -->
-    <div class="chip tier-S" style="margin-bottom:18px">S — Flagships</div>
+    <div style="margin-bottom:16px">
+      <div class="chip tier-S">S — Flagships</div>
+    </div>
     <div class="grid" style="margin-bottom:32px">
 
-      <article class="panel featured reveal">
+      <article class="panel featured reveal" data-tier="S">
         <div class="content">
           <h3><a href="https://github.com/HarshCodeK/recoup">recoup</a> <span class="tier-badge s">S</span></h3>
           <p>A deterministic payment reconciliation control plane. Normalizes transactions from 5 sources,
@@ -88,7 +113,7 @@
         </div>
       </article>
 
-      <article class="panel reveal reveal-delay-1">
+      <article class="panel reveal reveal-delay-1" data-tier="S">
         <h3><a href="https://github.com/HarshCodeK/megaproject">megaproject</a> <span class="tier-badge s">S</span></h3>
         <p>Unified AI agent OS built from 5 separate AI systems. Voice meeting agent, multi-model code orchestrator,
         RAG enterprise chatbot, hybrid log classifier, and financial voice agent — all wired into a single agent OS
@@ -102,10 +127,12 @@
     </div>
 
     <!-- A TIER -->
-    <div class="chip tier-A" style="margin-bottom:18px">A — Cross-Domain</div>
+    <div style="margin-bottom:16px">
+      <div class="chip tier-A">A — Cross-Domain</div>
+    </div>
     <div class="grid c2" style="margin-bottom:32px">
 
-      <article class="panel reveal">
+      <article class="panel reveal" data-tier="A">
         <h3><a href="https://github.com/HarshCodeK/fiduciary">fiduciary</a> <span class="tier-badge a">A</span></h3>
         <p>Trust layer for agentic commerce. AI buyer agent searches a catalog and pays on Razorpay — but every
         money action passes through a control plane the agent cannot bypass. 5 components: effective-price engine,
@@ -116,7 +143,7 @@
         <a class="link" href="https://github.com/HarshCodeK/fiduciary">View repository <span class="arrow">→</span></a>
       </article>
 
-      <article class="panel reveal reveal-delay-1">
+      <article class="panel reveal reveal-delay-1" data-tier="A">
         <h3><a href="https://github.com/HarshCodeK/kay-kay">kay-kay</a> <span class="tier-badge a">A</span></h3>
         <p>Universal AI operating layer. OpenAI-compatible gateway that routes, observes, and accounts for AI
         workloads — model-agnostic by design. Drop-in: change <code>base_url</code> and existing apps get
@@ -130,10 +157,12 @@
     </div>
 
     <!-- B TIER -->
-    <div class="chip tier-B" style="margin-bottom:18px">B — Supporting</div>
+    <div style="margin-bottom:16px">
+      <div class="chip tier-B">B — Supporting</div>
+    </div>
     <div class="grid c3" style="margin-bottom:32px">
 
-      <article class="panel reveal">
+      <article class="panel reveal" data-tier="B">
         <h3><a href="https://github.com/HarshCodeK/regent">regent</a> <span class="tier-badge b">B</span></h3>
         <p>One OpenAI-compatible endpoint that decides which model answers, enforces the budget,
         and writes an append-only ledger of every decision. Integer micro-USD — no float on a money path.</p>
@@ -143,7 +172,7 @@
         <a class="link" href="https://github.com/HarshCodeK/regent">View repository <span class="arrow">→</span></a>
       </article>
 
-      <article class="panel reveal reveal-delay-1">
+      <article class="panel reveal reveal-delay-1" data-tier="B">
         <h3><a href="https://github.com/HarshCodeK/proofsheet">proofsheet</a> <span class="tier-badge b">B</span></h3>
         <p>Point it at any repository and it returns a verifiable evidence sheet — what is tested,
         documented, broken — with a file:line citation for every claim.</p>
@@ -153,7 +182,7 @@
         <a class="link" href="https://github.com/HarshCodeK/proofsheet">View repository <span class="arrow">→</span></a>
       </article>
 
-      <article class="panel reveal reveal-delay-2">
+      <article class="panel reveal reveal-delay-2" data-tier="B">
         <h3><a href="https://github.com/HarshCodeK/aegis">aegis</a> <span class="tier-badge b">B</span></h3>
         <p>Autonomous customer resolution agent with a trust protocol. Policy check → dry-run → commit →
         verify → auto-rollback. Hand-rolled — no LangChain. Built at IIT Bhubaneswar hackathon.</p>
@@ -163,7 +192,7 @@
         <a class="link" href="https://github.com/HarshCodeK/aegis">View repository <span class="arrow">→</span></a>
       </article>
 
-      <article class="panel reveal">
+      <article class="panel reveal" data-tier="B">
         <h3><a href="https://github.com/HarshCodeK/holdfast">holdfast</a> <span class="tier-badge b">B</span></h3>
         <p>Booking API where double-booking is structurally impossible. Three layers of defence:
         idempotency keys, guarded transactions, partial unique constraints. Zero double-bookings under load.</p>
@@ -176,10 +205,12 @@
     </div>
 
     <!-- HUB -->
-    <div class="chip tier-L" style="margin-bottom:18px">Hub</div>
+    <div style="margin-bottom:16px">
+      <div class="chip tier-L">Hub</div>
+    </div>
     <div class="grid" style="margin-bottom:32px">
 
-      <article class="panel reveal">
+      <article class="panel reveal" data-tier="hub">
         <h3><a href="https://harshkharavle.github.io">this site</a> <span class="tier-badge l">Hub</span></h3>
         <p>Case studies, the evidence wall above, and a resume generated from the same measured
         numbers. No metric on this page is typed by hand — every number traces to a repository's
@@ -259,10 +290,13 @@ try {
   const wall = document.getElementById("wall");
   wall.innerHTML = repos.map(function(r){
     var cls = r.tier === "S" ? "accent" : r.tier === "A" ? "warn" : r.tier === "hub" ? "accent" : "info";
-    return '<div class="ev ' + cls + '">'
+    var tooltip = r.headline && r.headline[0] && r.headline[0].command
+      ? r.headline[0].command
+      : r.source ? "source: EVIDENCE.json" : "";
+    return '<div class="ev ' + cls + '" title="' + tooltip + '">'
       + '<div class="v">' + (r.gate ? r.gate.tests_passed : 0) + '</div>'
       + '<div class="l">' + r.repo + ' — tests passing (' + r.tier + ' tier)</div>'
-      + '<div class="c">' + (r.source ? "source: EVIDENCE.json" : "") + '</div></div>';
+      + '<div class="c">' + (tooltip ? tooltip : "") + '</div></div>';
   }).join("");
   const rows = repos.flatMap(function(r){
     return (r.rows||[]).map(function(x){
@@ -273,6 +307,23 @@ try {
 } catch (e) {
   fail(document.getElementById("wall"), e);
 }
+
+// ── Tier filter ──
+document.querySelectorAll(".filter-btn").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    document.querySelector(".filter-btn.active").classList.remove("active");
+    this.classList.add("active");
+    var filter = this.dataset.filter;
+    document.querySelectorAll("#work .panel").forEach(function(panel){
+      var panelTier = panel.dataset.tier;
+      if (filter === "all" || panelTier === filter) {
+        panel.style.display = "";
+      } else {
+        panel.style.display = "none";
+      }
+    });
+  });
+});
 
 // ── Scroll Reveal ──
 const observer = new IntersectionObserver(function(entries){
@@ -321,6 +372,37 @@ document.querySelectorAll(".ev .v").forEach(function(el){
     }, { threshold: 0.5 });
     obs.observe(el);
   }
+});
+
+// ── Hero stat count-up ──
+function animateStatText(el, finalText, duration) {
+  var numeric = parseInt(finalText, 10);
+  if (isNaN(numeric)) return;
+  el.textContent = "0";
+  var startTime = null;
+  function step(timestamp) {
+    if (!startTime) startTime = timestamp;
+    var progress = Math.min((timestamp - startTime) / duration, 1);
+    var eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * numeric);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+var statObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if (entry.isIntersecting) {
+      var el = entry.target;
+      var final = el.textContent;
+      animateStatText(el, final, 1500);
+      statObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.6 });
+
+document.querySelectorAll(".stat-num").forEach(function(el){
+  statObs.observe(el);
 });
 </script>
 </body>

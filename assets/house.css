@@ -134,7 +134,49 @@ header.top nav a:hover { color: var(--text); text-decoration: none; }
 .btn .arrow { transition: transform 0.2s; }
 .btn:hover .arrow { transform: translateX(3px); }
 
-/* ─── EVIDENCE WALL ─── */
+/* ─── HERO STATS ─── */
+.hero-stats {
+  display: flex; gap: 40px; margin-top: 48px;
+  flex-wrap: wrap;
+}
+.stat-group {
+  display: flex; align-items: baseline; gap: 8px;
+}
+.stat-num {
+  font-family: var(--mono); font-size: 32px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #3BA5D6);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-size: 13px; color: var(--muted); font-weight: 500;
+}
+
+/* ─── TIER FILTERS ─── */
+.tier-filters {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.filter-btn {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font: 12px/1 var(--mono);
+  padding: 5px 14px; border-radius: 999px;
+  cursor: pointer; transition: all 0.2s;
+  backdrop-filter: blur(8px);
+}
+.filter-btn:hover {
+  border-color: rgba(76,195,138,0.3);
+  color: var(--text);
+}
+.filter-btn.active {
+  background: var(--accent);
+  color: #06251A;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+/* ─── HOUSE ─── */
 .evidence {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
