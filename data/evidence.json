@@ -1,0 +1,136 @@
+[
+  {
+    "repo": "recoup",
+    "tier": "S",
+    "domain": "payment reconciliation / control plane",
+    "gate": {
+      "tests_passed": 153,
+      "tests_failed": 0,
+      "pytest_exit": 0
+    },
+    "headline": [
+      { "label": "tests passing", "value": "153", "command": "python -m pytest -q", "tone": "accent" },
+      { "label": "test files", "value": "18", "command": "ls tests/", "tone": "" },
+      { "label": "hash-chained audit entries", "value": "yes", "command": "grep -c SHA256 src/event_store.py", "tone": "info" }
+    ],
+    "rows": [
+      { "metric": "tests passing", "value": 153, "command": "python -m pytest -q" },
+      { "metric": "test files", "value": 18, "command": "ls tests/ | wc -l" },
+      { "metric": "source modules", "value": 12, "command": "ls src/*.py | wc -l" },
+      { "metric": "deterministic rules in rule engine", "value": 4, "command": "grep -c 'def match' src/rule_engine.py" },
+      { "metric": "data sources supported", "value": 5, "command": "grep -c 'class.*Source' src/normalizer.py" }
+    ],
+    "source": "C:\\Desktop\\projects\\archived\\recoup\\EVIDENCE.json"
+  },
+  {
+    "repo": "proofsheet",
+    "tier": "S",
+    "domain": "developer tooling / evidence auditor",
+    "gate": {
+      "tests_passed": 9,
+      "tests_failed": 0,
+      "pytest_exit": 0
+    },
+    "headline": [
+      { "label": "tests passing", "value": "9", "command": "python -m pytest -q", "tone": "accent" },
+      { "label": "pure-function signals", "value": "11", "command": "grep -c 'def signal_' src/signals.py", "tone": "info" },
+      { "label": "every finding cites file:line", "value": "100%", "command": "grep -c 'file:' src/signals.py", "tone": "" }
+    ],
+    "rows": [
+      { "metric": "tests passing", "value": 9, "command": "python -m pytest -q" },
+      { "metric": "pure-function signals", "value": 11, "command": "grep -c 'def signal_' src/signals.py" },
+      { "metric": "source modules", "value": 8, "command": "ls src/*.py | wc -l" },
+      { "metric": "deterministic (no LLM)", "value": "yes", "command": "grep -rL 'openai\|groq\|llm' src/" }
+    ],
+    "source": "C:\\Desktop\\projects\\proofsheet\\EVIDENCE.json"
+  },
+  {
+    "repo": "regent",
+    "tier": "F",
+    "domain": "AI infrastructure / LLM gateway",
+    "gate": {
+      "tests_passed": 32,
+      "tests_failed": 0,
+      "coverage_pct": 99
+    },
+    "headline": [
+      { "label": "tests passing", "value": "32", "command": "python -m pytest -q", "tone": "accent" },
+      { "label": "coverage on src", "value": "99%", "command": "python -m pytest -q --cov=src", "tone": "info" },
+      { "label": "http endpoints", "value": "5", "command": "grep -c '@app.' src/app.py", "tone": "" }
+    ],
+    "rows": [
+      { "metric": "tests passing", "value": 32, "command": "python -m pytest -q" },
+      { "metric": "coverage on src", "value": 99, "command": "python -m pytest -q --cov=src" },
+      { "metric": "http endpoints", "value": 5, "command": "grep -c '@app.' src/app.py" },
+      { "metric": "money path floats", "value": 0, "command": "python -m pytest tests/test_ledger.py -q" },
+      { "metric": "CI matrix versions", "value": 4, "command": "grep -c '3.' .github/workflows/ci.yml" }
+    ],
+    "source": "C:\\Desktop\\projects\\regent\\EVIDENCE.json"
+  },
+  {
+    "repo": "aegis",
+    "tier": "F",
+    "domain": "AI agents / trust protocol",
+    "gate": {
+      "tests_passed": 0,
+      "tests_failed": 0,
+      "note": "tests needed — hackathon build"
+    },
+    "headline": [
+      { "label": "source lines (agent loop)", "value": "502", "command": "wc -l src/lib/agent.ts", "tone": "info" },
+      { "label": "source lines (world sim)", "value": "779", "command": "wc -l src/lib/world.ts", "tone": "" },
+      { "label": "trust protocol steps", "value": "5", "command": "grep -c 'step' src/lib/agent.ts", "tone": "accent" }
+    ],
+    "rows": [
+      { "metric": "agent loop lines", "value": 502, "command": "wc -l src/lib/agent.ts" },
+      { "metric": "world simulation lines", "value": 779, "command": "wc -l src/lib/world.ts" },
+      { "metric": "trust protocol steps", "value": 5, "command": "grep -c 'TrustStep' src/lib/agent.ts" },
+      { "metric": "hand-rolled (no LangChain)", "value": "yes", "command": "grep -rL 'langchain' src/" }
+    ],
+    "source": "C:\\Desktop\\projects\\aegis\\EVIDENCE.json"
+  },
+  {
+    "repo": "holdfast",
+    "tier": "L",
+    "domain": "reservations / backend engineering",
+    "gate": {
+      "tests_passed": 4,
+      "tests_failed": 0,
+      "pytest_exit": 0
+    },
+    "headline": [
+      { "label": "double-bookings under load", "value": "0", "command": "python scripts/contention.py --workers 6 --attempts 24", "tone": "accent" },
+      { "label": "test files", "value": "4", "command": "ls tests/", "tone": "info" },
+      { "label": "layers of defence", "value": "3", "command": "grep -c 'unique_together\|select_for_update\|idempotency' booking/", "tone": "" }
+    ],
+    "rows": [
+      { "metric": "double-bookings under parallel load", "value": 0, "command": "python scripts/contention.py --workers 6 --attempts 24" },
+      { "metric": "test files", "value": 4, "command": "ls tests/ | wc -l" },
+      { "metric": "concurrent workers in harness", "value": 6, "command": "python scripts/contention.py --workers 6" },
+      { "metric": "database-level invariant", "value": "yes", "command": "grep unique_together booking/models.py" },
+      { "metric": "idempotency key support", "value": "yes", "command": "grep idempotency_key booking/services.py" }
+    ],
+    "source": "C:\\Desktop\\projects\\holdfast\\EVIDENCE.json"
+  },
+  {
+    "repo": "harshkharavle.github.io",
+    "tier": "L",
+    "domain": "portfolio / the hub",
+    "gate": {
+      "tests_passed": 1,
+      "tests_failed": 0,
+      "note": "this site"
+    },
+    "headline": [
+      { "label": "repos on profile", "value": "6", "command": "gh repo list HarshCodeK --json name --jq length", "tone": "accent" },
+      { "label": "framework dependencies", "value": "0", "command": "cat package.json | grep -c dependencies", "tone": "info" },
+      { "label": "every number has a source", "value": "yes", "command": "cat data/evidence.json | python -m json.tool", "tone": "" }
+    ],
+    "rows": [
+      { "metric": "repos on profile", "value": 6, "command": "gh repo list HarshCodeK --json name --jq length" },
+      { "metric": "framework dependencies", "value": 0, "command": "cat package.json | grep -c dependencies" },
+      { "metric": "evidence sources wired", "value": 6, "command": "cat data/evidence.json | python -c 'import json,sys;print(len(json.load(sys.stdin)))'" }
+    ],
+    "source": "C:\\Desktop\\portfolio\\harshkharavle.github.io\\EVIDENCE.json"
+  }
+]
