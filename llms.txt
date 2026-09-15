@@ -1,0 +1,5 @@
+# Harsh Kharavle - portfolio evidence
+
+Every line below is generated from a repository's own EVIDENCE.json.
+
+- regent (S tier, AI infrastructure): 0 tests passing; source: C:\Desktop\regent\EVIDENCE.json
