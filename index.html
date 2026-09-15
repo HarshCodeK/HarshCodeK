@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Harsh Kharavle — systems that prove themselves</title>
-<meta name="description" content="Portfolio of Harsh Paresh Kharavle: six repositories, one standard - every claim has the command that reproduces it. Software engineer building control planes for AI systems.">
+<meta name="description" content="Portfolio of Harsh Paresh Kharavle: nine repositories, one standard - every claim has the command that reproduces it. Software engineer building control planes for AI systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
   <div class="hero">
     <span class="chip ok">open to SDE / AI engineering roles</span>
     <h1>I build <span class="accent">control planes</span> where trust is engineered, not claimed.</h1>
-    <p class="lead">Six repositories, one standard. Every claim carries the command that reproduces it.
+    <p class="lead">Nine repositories, one standard. Every claim carries the command that reproduces it.
     Every repo has measured proof. Nothing is described as production-grade until it is.</p>
     <p class="for">B.Tech CSE fresher. Python, TypeScript, Django, FastAPI, React, SQLite/PostgreSQL.
     I build systems where AI can triage but cannot move money, where double-booking is structurally impossible,
@@ -56,7 +56,7 @@
   <!-- ═══ WORK ═══ -->
   <section id="work">
     <h2>Work</h2>
-    <p class="sub">Six projects. Each has a single governing invariant, measured proof, and a story
+    <p class="sub">Nine repositories, one standard. Each has a single governing invariant, measured proof, and a story
     that can be explained cold on a whiteboard.</p>
 
     <!-- S TIER -->
@@ -89,66 +89,101 @@
       </article>
 
       <article class="panel reveal reveal-delay-1">
-        <h3><a href="https://github.com/HarshCodeK/proofsheet">proofsheet</a> <span class="tier-badge s">S</span></h3>
-        <p>Point it at any repository and it returns a verifiable evidence sheet — what is actually tested,
-        what is documented, what would break — with a file:line citation for every claim.
-        The portfolio proves itself with the tool it ships.</p>
+        <h3><a href="https://github.com/HarshCodeK/megaproject">megaproject</a> <span class="tier-badge s">S</span></h3>
+        <p>Unified AI agent OS built from 5 separate AI systems. Voice meeting agent, multi-model code orchestrator,
+        RAG enterprise chatbot, hybrid log classifier, and financial voice agent — all wired into a single agent OS
+        through a plugin architecture. One runtime, five capabilities.</p>
         <div class="tech">
-          <span>Python</span><span>FastAPI</span><span>Pydantic</span><span>deterministic</span><span>no LLM</span>
+          <span>TypeScript</span><span>Python</span><span>FastAPI</span><span>Realtime</span><span>5 plugins</span>
         </div>
-        <a class="link" href="https://github.com/HarshCodeK/proofsheet">View repository <span class="arrow">→</span></a>
+        <a class="link" href="https://github.com/HarshCodeK/megaproject">View repository <span class="arrow">→</span></a>
       </article>
 
     </div>
 
-    <!-- F TIER -->
-    <div class="chip tier-F" style="margin-bottom:18px">F — Domain Labs</div>
+    <!-- A TIER -->
+    <div class="chip tier-A" style="margin-bottom:18px">A — Cross-Domain</div>
     <div class="grid c2" style="margin-bottom:32px">
 
       <article class="panel reveal">
-        <h3><a href="https://github.com/HarshCodeK/regent">regent</a> <span class="tier-badge f">F</span></h3>
-        <p>One OpenAI-compatible endpoint that decides which model answers, enforces the budget,
-        and writes an append-only ledger of every decision. Cost control with a trust boundary.
-        Integer micro-USD — no float on a money path.</p>
+        <h3><a href="https://github.com/HarshCodeK/fiduciary">fiduciary</a> <span class="tier-badge a">A</span></h3>
+        <p>Trust layer for agentic commerce. AI buyer agent searches a catalog and pays on Razorpay — but every
+        money action passes through a control plane the agent cannot bypass. 5 components: effective-price engine,
+        idempotency guard, HMAC consent tokens, hash-chained audit, signed receipts.</p>
         <div class="tech">
-          <span>Python</span><span>FastAPI</span><span>SQLite</span><span>32 tests</span><span>CI 3.10–3.13</span>
+          <span>TypeScript</span><span>Fastify</span><span>Razorpay</span><span>HMAC</span><span>SHA-256</span>
+        </div>
+        <a class="link" href="https://github.com/HarshCodeK/fiduciary">View repository <span class="arrow">→</span></a>
+      </article>
+
+      <article class="panel reveal reveal-delay-1">
+        <h3><a href="https://github.com/HarshCodeK/kay-kay">kay-kay</a> <span class="tier-badge a">A</span></h3>
+        <p>Universal AI operating layer. OpenAI-compatible gateway that routes, observes, and accounts for AI
+        workloads — model-agnostic by design. Drop-in: change <code>base_url</code> and existing apps get
+        provider fallback, telemetry, and cost tracking.</p>
+        <div class="tech">
+          <span>Python</span><span>FastAPI</span><span>SQLite</span><span>OpenAI-compatible</span><span>4-chapter roadmap</span>
+        </div>
+        <a class="link" href="https://github.com/HarshCodeK/kay-kay">View repository <span class="arrow">→</span></a>
+      </article>
+
+    </div>
+
+    <!-- B TIER -->
+    <div class="chip tier-B" style="margin-bottom:18px">B — Supporting</div>
+    <div class="grid c3" style="margin-bottom:32px">
+
+      <article class="panel reveal">
+        <h3><a href="https://github.com/HarshCodeK/regent">regent</a> <span class="tier-badge b">B</span></h3>
+        <p>One OpenAI-compatible endpoint that decides which model answers, enforces the budget,
+        and writes an append-only ledger of every decision. Integer micro-USD — no float on a money path.</p>
+        <div class="tech">
+          <span>Python</span><span>FastAPI</span><span>SQLite</span><span>32 tests</span><span>99% coverage</span>
         </div>
         <a class="link" href="https://github.com/HarshCodeK/regent">View repository <span class="arrow">→</span></a>
       </article>
 
       <article class="panel reveal reveal-delay-1">
-        <h3><a href="https://github.com/HarshCodeK/aegis">aegis</a> <span class="tier-badge f">F</span></h3>
-        <p>Autonomous customer resolution agent with a trust protocol. Every action passes through:
-        policy check → dry-run → commit → verify → auto-rollback on failure.
-        Hand-rolled agent loop — no LangChain, no framework.</p>
+        <h3><a href="https://github.com/HarshCodeK/proofsheet">proofsheet</a> <span class="tier-badge b">B</span></h3>
+        <p>Point it at any repository and it returns a verifiable evidence sheet — what is tested,
+        documented, broken — with a file:line citation for every claim.</p>
+        <div class="tech">
+          <span>Python</span><span>FastAPI</span><span>Pydantic</span><span>deterministic</span>
+        </div>
+        <a class="link" href="https://github.com/HarshCodeK/proofsheet">View repository <span class="arrow">→</span></a>
+      </article>
+
+      <article class="panel reveal reveal-delay-2">
+        <h3><a href="https://github.com/HarshCodeK/aegis">aegis</a> <span class="tier-badge b">B</span></h3>
+        <p>Autonomous customer resolution agent with a trust protocol. Policy check → dry-run → commit →
+        verify → auto-rollback. Hand-rolled — no LangChain. Built at IIT Bhubaneswar hackathon.</p>
         <div class="tech">
           <span>TypeScript</span><span>Next.js 16</span><span>Gemini API</span><span>chaos injection</span>
         </div>
         <a class="link" href="https://github.com/HarshCodeK/aegis">View repository <span class="arrow">→</span></a>
       </article>
 
-    </div>
-
-    <!-- L TIER -->
-    <div class="chip tier-L" style="margin-bottom:18px">L — Interview Tier</div>
-    <div class="grid c2">
-
       <article class="panel reveal">
-        <h3><a href="https://github.com/HarshCodeK/holdfast">holdfast</a> <span class="tier-badge l">L</span></h3>
-        <p>A booking API where double-booking is structurally impossible. Three layers of defence:
-        idempotency keys, guarded transactions with <code>select_for_update</code>, and partial unique
-        database constraints. A contention harness fires parallel requests and proves zero double-bookings.</p>
+        <h3><a href="https://github.com/HarshCodeK/holdfast">holdfast</a> <span class="tier-badge b">B</span></h3>
+        <p>Booking API where double-booking is structurally impossible. Three layers of defence:
+        idempotency keys, guarded transactions, partial unique constraints. Zero double-bookings under load.</p>
         <div class="tech">
-          <span>Python</span><span>Django</span><span>DRF</span><span>SQLite</span><span>Postgres-ready</span>
+          <span>Python</span><span>Django</span><span>DRF</span><span>SQLite</span>
         </div>
         <a class="link" href="https://github.com/HarshCodeK/holdfast">View repository <span class="arrow">→</span></a>
       </article>
 
-      <article class="panel reveal reveal-delay-1">
-        <h3><a href="https://harshkharavle.github.io">this site</a> <span class="tier-badge l">L</span></h3>
-        <p>The hub. Case studies, the evidence wall above, and a resume generated from the same measured
+    </div>
+
+    <!-- HUB -->
+    <div class="chip tier-L" style="margin-bottom:18px">Hub</div>
+    <div class="grid" style="margin-bottom:32px">
+
+      <article class="panel reveal">
+        <h3><a href="https://harshkharavle.github.io">this site</a> <span class="tier-badge l">Hub</span></h3>
+        <p>Case studies, the evidence wall above, and a resume generated from the same measured
         numbers. No metric on this page is typed by hand — every number traces to a repository's
-        <code>EVIDENCE.json</code>.</p>
+        <code>EVIDENCE.json</code>. Zero framework dependencies.</p>
         <div class="tech">
           <span>HTML</span><span>CSS</span><span>JS</span><span>GitHub Pages</span><span>zero framework</span>
         </div>
@@ -223,7 +258,8 @@ try {
   const repos = await loadJSON("data/evidence.json");
   const wall = document.getElementById("wall");
   wall.innerHTML = repos.map(function(r){
-    return '<div class="ev ' + (r.tier === "S" ? "accent" : r.tier === "F" ? "warn" : "info') + '">'
+    var cls = r.tier === "S" ? "accent" : r.tier === "A" ? "warn" : r.tier === "hub" ? "accent" : "info";
+    return '<div class="ev ' + cls + '">'
       + '<div class="v">' + (r.gate ? r.gate.tests_passed : 0) + '</div>'
       + '<div class="l">' + r.repo + ' — tests passing (' + r.tier + ' tier)</div>'
       + '<div class="c">' + (r.source ? "source: EVIDENCE.json" : "") + '</div></div>';

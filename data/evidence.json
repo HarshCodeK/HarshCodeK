@@ -23,8 +23,76 @@
     "source": "C:\\Desktop\\projects\\archived\\recoup\\EVIDENCE.json"
   },
   {
-    "repo": "proofsheet",
+    "repo": "megaproject",
     "tier": "S",
+    "domain": "unified AI agent OS / plugin architecture",
+    "gate": {
+      "tests_passed": 0,
+      "tests_failed": 0,
+      "note": "plugin architecture — 5 AI systems unified"
+    },
+    "headline": [
+      { "label": "plugins unified", "value": "5", "command": "ls -d skills/*/  | wc -l", "tone": "accent" },
+      { "label": "source modules", "value": "12", "command": "ls src/ | wc -l", "tone": "info" },
+      { "label": "zero duplicated infrastructure", "value": "yes", "command": "grep -rL 'import.*from.*other_plugin' src/", "tone": "" }
+    ],
+    "rows": [
+      { "metric": "plugins unified", "value": 5, "command": "ls -d skills/*/ | wc -l" },
+      { "metric": "source modules", "value": 12, "command": "ls src/ | wc -l" },
+      { "metric": "plugin manifest entries", "value": 5, "command": "cat skills/manifest.json | python -c 'import json,sys;print(len(json.load(sys.stdin)))'" },
+      { "metric": "zero duplicated infrastructure", "value": "yes", "command": "grep -rL 'import.*from.*other_plugin' src/" }
+    ],
+    "source": "C:\\Desktop\\projects\\archived\\megaproject\\EVIDENCE.json"
+  },
+  {
+    "repo": "fiduciary",
+    "tier": "A",
+    "domain": "agentic commerce / trust layer",
+    "gate": {
+      "tests_passed": 0,
+      "tests_failed": 0,
+      "note": "6 demo scenarios, 5 control plane components"
+    },
+    "headline": [
+      { "label": "control plane components", "value": "5", "command": "ls control-plane/src/ | wc -l", "tone": "accent" },
+      { "label": "demo scenarios", "value": "6", "command": "grep -c 'Scenario' demo/run-demo.js", "tone": "info" },
+      { "label": "idempotency guard", "value": "yes", "command": "grep -c 'IdempotencyGuard' control-plane/src/idempotency/guard.ts", "tone": "" }
+    ],
+    "rows": [
+      { "metric": "control plane components", "value": 5, "command": "ls control-plane/src/ | wc -l" },
+      { "metric": "demo scenarios", "value": 6, "command": "grep -c 'Scenario' demo/run-demo.js" },
+      { "metric": "consent token TTL", "value": "5 min", "command": "grep TTL_MS control-plane/.env.example" },
+      { "metric": "audit chain verified", "value": "yes", "command": "grep -c 'verifyChain' control-plane/src/audit/store.ts" },
+      { "metric": "Razorpay test-mode", "value": "yes", "command": "grep 'test-mode' README.md" }
+    ],
+    "source": "C:\\Desktop\\projects\\archived\\fiduciary\\EVIDENCE.json"
+  },
+  {
+    "repo": "kay-kay",
+    "tier": "A",
+    "domain": "AI infrastructure / universal operating layer",
+    "gate": {
+      "tests_passed": 5,
+      "tests_failed": 0,
+      "pytest_exit": 0
+    },
+    "headline": [
+      { "label": "tests passing", "value": "5", "command": "python -m pytest tests/ -q", "tone": "accent" },
+      { "label": "source modules", "value": "5", "command": "ls src/*.py | wc -l", "tone": "info" },
+      { "label": "OpenAI-compatible", "value": "yes", "command": "grep '/v1/chat/completions' src/gateway.py", "tone": "" }
+    ],
+    "rows": [
+      { "metric": "tests passing", "value": 5, "command": "python -m pytest tests/ -q" },
+      { "metric": "source modules", "value": 5, "command": "ls src/*.py | wc -l" },
+      { "metric": "provider fallback chain", "value": "yes", "command": "grep 'PROVIDER_CHAIN' src/providers.py" },
+      { "metric": "API-key auth (SHA-256)", "value": "yes", "command": "grep 'sha256' src/auth.py" },
+      { "metric": "usage tracking", "value": "yes", "command": "grep '/v1/usage' src/gateway.py" }
+    ],
+    "source": "C:\\Desktop\\projects\\archived\\kay-kay\\EVIDENCE.json"
+  },
+  {
+    "repo": "proofsheet",
+    "tier": "B",
     "domain": "developer tooling / evidence auditor",
     "gate": {
       "tests_passed": 9,
@@ -40,13 +108,13 @@
       { "metric": "tests passing", "value": 9, "command": "python -m pytest -q" },
       { "metric": "pure-function signals", "value": 11, "command": "grep -c 'def signal_' src/signals.py" },
       { "metric": "source modules", "value": 8, "command": "ls src/*.py | wc -l" },
-      { "metric": "deterministic (no LLM)", "value": "yes", "command": "grep -rL 'openai\|groq\|llm' src/" }
+      { "metric": "deterministic (no LLM)", "value": "yes", "command": "grep -rL 'openai\\|groq\\|llm' src/" }
     ],
     "source": "C:\\Desktop\\projects\\proofsheet\\EVIDENCE.json"
   },
   {
     "repo": "regent",
-    "tier": "F",
+    "tier": "B",
     "domain": "AI infrastructure / LLM gateway",
     "gate": {
       "tests_passed": 32,
@@ -69,7 +137,7 @@
   },
   {
     "repo": "aegis",
-    "tier": "F",
+    "tier": "B",
     "domain": "AI agents / trust protocol",
     "gate": {
       "tests_passed": 0,
@@ -91,7 +159,7 @@
   },
   {
     "repo": "holdfast",
-    "tier": "L",
+    "tier": "B",
     "domain": "reservations / backend engineering",
     "gate": {
       "tests_passed": 4,
@@ -101,7 +169,7 @@
     "headline": [
       { "label": "double-bookings under load", "value": "0", "command": "python scripts/contention.py --workers 6 --attempts 24", "tone": "accent" },
       { "label": "test files", "value": "4", "command": "ls tests/", "tone": "info" },
-      { "label": "layers of defence", "value": "3", "command": "grep -c 'unique_together\|select_for_update\|idempotency' booking/", "tone": "" }
+      { "label": "layers of defence", "value": "3", "command": "grep -c 'unique_together\\|select_for_update\\|idempotency' booking/", "tone": "" }
     ],
     "rows": [
       { "metric": "double-bookings under parallel load", "value": 0, "command": "python scripts/contention.py --workers 6 --attempts 24" },
@@ -114,7 +182,7 @@
   },
   {
     "repo": "harshkharavle.github.io",
-    "tier": "L",
+    "tier": "hub",
     "domain": "portfolio / the hub",
     "gate": {
       "tests_passed": 1,
@@ -122,14 +190,14 @@
       "note": "this site"
     },
     "headline": [
-      { "label": "repos on profile", "value": "6", "command": "gh repo list HarshCodeK --json name --jq length", "tone": "accent" },
+      { "label": "repos on profile", "value": "9", "command": "gh repo list HarshCodeK --json name --jq length", "tone": "accent" },
       { "label": "framework dependencies", "value": "0", "command": "cat package.json | grep -c dependencies", "tone": "info" },
       { "label": "every number has a source", "value": "yes", "command": "cat data/evidence.json | python -m json.tool", "tone": "" }
     ],
     "rows": [
-      { "metric": "repos on profile", "value": 6, "command": "gh repo list HarshCodeK --json name --jq length" },
+      { "metric": "repos on profile", "value": 9, "command": "gh repo list HarshCodeK --json name --jq length" },
       { "metric": "framework dependencies", "value": 0, "command": "cat package.json | grep -c dependencies" },
-      { "metric": "evidence sources wired", "value": 6, "command": "cat data/evidence.json | python -c 'import json,sys;print(len(json.load(sys.stdin)))'" }
+      { "metric": "evidence sources wired", "value": 9, "command": "cat data/evidence.json | python -c 'import json,sys;print(len(json.load(sys.stdin)))'" }
     ],
     "source": "C:\\Desktop\\portfolio\\harshkharavle.github.io\\EVIDENCE.json"
   }

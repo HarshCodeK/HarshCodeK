@@ -68,6 +68,8 @@ header.top nav a:hover { color: var(--text); text-decoration: none; }
   backdrop-filter: blur(8px);
 }
 .chip.tier-S { border-color: rgba(76,195,138,0.4); color: var(--accent); background: rgba(76,195,138,0.06); }
+.chip.tier-A { border-color: rgba(227,179,65,0.4); color: var(--warn); background: rgba(227,179,65,0.06); }
+.chip.tier-B { border-color: rgba(110,155,247,0.4); color: var(--info); background: rgba(110,155,247,0.06); }
 .chip.tier-F { border-color: rgba(227,179,65,0.4); color: var(--warn); background: rgba(227,179,65,0.06); }
 .chip.tier-L { border-color: rgba(110,155,247,0.4); color: var(--info); background: rgba(110,155,247,0.06); }
 .chip.ok { border-color: rgba(76,195,138,0.4); color: var(--accent); background: rgba(76,195,138,0.06); }
@@ -223,6 +225,8 @@ section p.sub {
   border-radius: 6px; font-weight: 600;
 }
 .panel h3 .tier-badge.s { background: rgba(76,195,138,0.12); color: var(--accent); }
+.panel h3 .tier-badge.a { background: rgba(227,179,65,0.12); color: var(--warn); }
+.panel h3 .tier-badge.b { background: rgba(110,155,247,0.12); color: var(--info); }
 .panel h3 .tier-badge.f { background: rgba(227,179,65,0.12); color: var(--warn); }
 .panel h3 .tier-badge.l { background: rgba(110,155,247,0.12); color: var(--info); }
 
