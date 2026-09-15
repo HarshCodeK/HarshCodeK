@@ -1,96 +1,164 @@
-# harshkharavle.github.io
+<div align="center">
 
-<sub>L tier - personal product site</sub>
+# Harsh Paresh Kharavle
 
-> Case studies for each repository, an evidence wall pulled from the repositories own EVIDENCE.json at build time, and a printable resume at /resume.html.
+**B.Tech CSE fresher building control planes for AI systems.**
 
-[![ci](https://github.com/HarshCodeK/harshkharavle.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/HarshCodeK/harshkharavle.github.io/actions/workflows/ci.yml)
-![licence](https://img.shields.io/badge/licence-MIT-lightgrey)
-![status](https://img.shields.io/badge/status-slice%201-blue)
+Systems where trust is engineered, not claimed. Where the LLM can triage but cannot move money. Where double-booking is structurally impossible.
 
-**Status: slice 1.** Slice 1 renders the evidence wall from real EVIDENCE.json files and refuses to show a number with no source. Every number in this file has the command that reproduces it,
-and every number that does not exist yet is marked as missing instead of estimated.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-harsh--k--422932284-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/harsh-k-422932284/)
+[![Email](https://img.shields.io/badge/Email-harsh.kharavle@gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:harsh.kharavle@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-harshkharavle.github.io-4CC38A?style=for-the-badge)](https://harshkharavle.github.io)
+
+</div>
 
 ---
 
-## The problem
+## The one-liner
 
-Portfolios drift: claims are typed by hand, go stale, and cannot be checked.
+> I don't build AI wrappers. I build **control planes** ??? systems where AI does what it's good at, and is structurally prevented from doing what it shouldn't.
 
-**Who it is for:** recruiters and interviewers who would rather see evidence than read adjectives
+---
+
+## Pinned Repositories
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/recoup">recoup</a>
+
+**Deterministic payment reconciliation control plane.**
+
+Normalizes transactions from 5 sources, auto-matches with rule engine + Jaccard probability, classifies exceptions, triages ambiguous cases with an LLM that can **refuse** but cannot touch money. SHA-256 hash-chained audit log. 153 tests.
+
+`Python` `Pydantic` `SQLite` `153 tests`
+
+**The invariant:** *LLM can triage. LLM cannot move money.*
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/proofsheet">proofsheet</a>
+
+**Verifiable engineering evidence for any repository.**
+
+Point it at a repo and it returns an evidence sheet ??? what's tested, what's documented, what would break ??? with a file:line citation for every claim. The portfolio proves itself with the tool it ships.
+
+`Python` `FastAPI` `Pydantic` `deterministic`
+
+**The invariant:** *A claim without a file citation is not a claim.*
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/regent">regent</a>
+
+**LLM gateway with integer micro-USD cost accounting.**
+
+One OpenAI-compatible endpoint that routes to providers, records every call in an append-only ledger, and enforces budgets. Stub runs offline with zero credentials. 32 tests, 99% coverage.
+
+`Python` `FastAPI` `SQLite` `32 tests` `99% coverage`
+
+**The invariant:** *Every call is accounted for. Unknown price is flagged, not guessed.*
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/aegis">aegis</a>
+
+**Autonomous customer resolution agent with trust protocol.**
+
+Every action passes through: policy check ??? dry-run ??? commit ??? verify ??? auto-rollback on failure. Hand-rolled agent loop ??? no LangChain, no framework. Built at IIT Bhubaneswar hackathon.
+
+`TypeScript` `Next.js 16` `Gemini API` `chaos injection`
+
+**The invariant:** *Agent cannot bypass policy. Failure triggers rollback.*
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### <a href="https://github.com/HarshCodeK/holdfast">holdfast</a>
+
+**Booking API where double-booking is structurally impossible.**
+
+Three layers of defence: idempotency keys, guarded transactions with `select_for_update`, and partial unique database constraints. Contention harness fires parallel requests and proves zero double-bookings.
+
+`Python` `Django` `DRF` `SQLite` `Postgres-ready`
+
+**The invariant:** *For a given resource and slot, exactly one hold wins.*
+
+</td>
+<td width="50%" valign="top">
+
+### <a href="https://harshkharavle.github.io">harshkharavle.github.io</a>
+
+**This site. The portfolio is itself a system.**
+
+Case studies, evidence wall, and resume ??? all generated from each repository's own measured numbers. No metric on this page is typed by hand. Zero framework dependencies.
+
+`HTML` `CSS` `JS` `GitHub Pages` `zero framework`
+
+**The invariant:** *Every number traces to a repository's EVIDENCE.json.*
+
+</td>
+</tr>
+</table>
+
+---
 
 ## Evidence
 
-| Metric | Value | Reproduce |
+| Metric | Value | Source |
 |---|---|---|
-| Metric | Value | Reproduce |
-|---|---|---|
-| repositories feeding the evidence wall | not yet measured | node scripts/build.js |
-| rendered numbers without a source file | not yet measured | node scripts/build.js --strict |
-| broken internal links | not yet measured | node scripts/build.js --check-links |
+| repos on profile | **6** | `gh repo list HarshCodeK` |
+| tests (recoup) | **153 passing** | `python -m pytest` in recoup |
+| tests (regent) | **32 passing, 99% coverage** | `python -m pytest --cov=src` in regent |
+| tests (proofsheet) | **9 passing** | `python -m pytest` in proofsheet |
+| audit chain integrity | **verified** | `python -c "from src.event_store import ..."` in recoup |
+| framework dependencies (hub) | **0** | `cat package.json` |
 
-Anything not in this table is not a claim yet.
+---
 
-## What this is NOT
-
-- No analytics or tracking
-- No framework build step - the build is one readable script
-- No invented metrics: if a repo has not measured it, the wall shows nothing
-
-The full honest list lives in [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
-
-## How it works
-
-Each repository runs make evidence and writes EVIDENCE.json with its own real numbers|The site build script reads those files and merges them into one aggregate, refusing any entry with no source|Pages render from that aggregate; a missing source is rendered as a refusal, never as a guess
+## How I work
 
 ```
-repo make evidence -> EVIDENCE.json -> build.js -> data/evidence.json -> pages + JSON-LD + llms.txt
+deployed beats described    ??? every repo has a landing page and dashboard
+a number or it did not happen ??? EVIDENCE.md with reproduce commands
+tradeoffs are the deliverable ??? TRADEOFFS.md in every repo
+explainable or excluded      ??? EXPLAIN.md + AGENTS.md per repo
 ```
 
-## Quickstart
+---
 
-```bash
-node scripts/build.js   # aggregates ../<repo>/EVIDENCE.json into data/evidence.json
-node scripts/serve.js    # http://localhost:8040
-```
+## Tech I actually use
 
-Run the gate exactly as CI does:
+**Languages:** Python, TypeScript, SQL
+**Backend:** FastAPI, Django, DRF
+**Frontend:** React, Next.js, HTML/CSS/JS (vanilla)
+**Data:** SQLite, PostgreSQL, ChromaDB
+**AI/ML:** Groq, Gemini, sentence-transformers, scikit-learn
+**Tools:** Git, CI/CD, pytest, ruff, Docker
+**Patterns:** Control planes, trust boundaries, hash-chained audit logs, idempotency, policy engines
 
-```bash
-npm test && node scripts/build.js
-```
+---
 
-## Dashboard
+## What I deliberately do not build
 
-The dashboard is the demo: it reads only numbers produced by this repo.
+- Todo apps, weather apps, calculators, e-commerce clones
+- Another RAG chatbot, or an AI feature without a trust boundary
+- Any claim without the command that reproduces it
+- A repository that repeats a pattern I already have
 
-```bash
-make evidence     # runs the real work and writes EVIDENCE.json
-make dashboard    # serves web/ on http://localhost:8080
-```
+---
 
-## Decisions, not just code
+<div align="center">
 
-| Read this | Why |
-|---|---|
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | module map and the invariants |
-| [docs/TRADEOFFS.md](docs/TRADEOFFS.md) | the governing constraint and the options rejected |
-| [docs/EXPLAIN.md](docs/EXPLAIN.md) | plain-language walkthrough and a 3-minute demo script |
-| [docs/EVIDENCE.md](docs/EVIDENCE.md) | every number, and how to reproduce it |
-| [docs/SESSION_CONTEXT.md](docs/SESSION_CONTEXT.md) | current state, landmines, next action |
-| [AGENTS.md](AGENTS.md) | handoff contract for any future session |
+*"Implementation became abundant. What is scarce is judgement."*
 
-## Weekly plan
+</div>
 
-1. Three case studies
-2. docs(case): regent, holdfast, proofsheet
-3. words per case study
-Three teardowns
-
-(full table in docs/PLAN_WEEKS.md)
-
-Full plan: [docs/PLAN_WEEKS.md](docs/PLAN_WEEKS.md).
-
-## Licence
-
-MIT - see [LICENSE](LICENSE).
