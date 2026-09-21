@@ -16,7 +16,7 @@ Systems where trust is engineered, not claimed. Where the LLM can triage but can
 
 ## The one-liner
 
-> I don't build AI wrappers. I build **control planes** â€” systems where AI does what it's good at, and is structurally prevented from doing what it shouldn't.
+> I don't build AI wrappers. I build **control planes** — systems where AI does what it's good at, and is structurally prevented from doing what it shouldn't.
 
 ---
 
@@ -43,7 +43,7 @@ Normalizes transactions from 5 sources, auto-matches with rule engine + Jaccard 
 
 **Unified AI agent OS built from 5 separate AI systems.**
 
-Voice meeting agent, multi-model code orchestrator, RAG enterprise chatbot, hybrid log classifier, and financial voice agent â€” all wired into a single agent OS through a plugin architecture. One runtime, five capabilities.
+Voice meeting agent, multi-model code orchestrator, RAG enterprise chatbot, hybrid log classifier, and financial voice agent — all wired into a single agent OS through a plugin architecture. One runtime, five capabilities.
 
 `TypeScript` `Python` `FastAPI` `Realtime` `5 plugins`
 
@@ -65,7 +65,7 @@ Voice meeting agent, multi-model code orchestrator, RAG enterprise chatbot, hybr
 
 **Trust layer for agentic commerce.**
 
-AI buyer agent searches a catalog and pays on Razorpay â€” but every money action passes through a control plane the agent cannot bypass. 5 components: effective-price engine, idempotency guard, HMAC consent tokens, hash-chained audit, signed receipts. 6 demo scenarios.
+AI buyer agent searches a catalog and pays on Razorpay — but every money action passes through a control plane the agent cannot bypass. 5 components: effective-price engine, idempotency guard, HMAC consent tokens, hash-chained audit, signed receipts. 6 demo scenarios.
 
 `TypeScript` `Fastify` `Razorpay test-mode` `HMAC` `SHA-256`
 
@@ -78,7 +78,7 @@ AI buyer agent searches a catalog and pays on Razorpay â€” but every money 
 
 **Universal AI operating layer.**
 
-OpenAI-compatible gateway that routes, observes, and accounts for AI workloads â€” model-agnostic by design. Drop-in: change `base_url` + `api_key` and existing apps get provider fallback, telemetry, and cost tracking. 4-chapter roadmap: Connect â†’ Optimize â†’ Operate â†’ Govern.
+OpenAI-compatible gateway that routes, observes, and accounts for AI workloads — model-agnostic by design. Drop-in: change `base_url` + `api_key` and existing apps get provider fallback, telemetry, and cost tracking. 4-chapter roadmap: Connect → Optimize → Operate → Govern.
 
 `Python` `FastAPI` `SQLite` `OpenAI-compatible` `4-chapter roadmap`
 
@@ -94,7 +94,7 @@ OpenAI-compatible gateway that routes, observes, and accounts for AI workloads �
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
 ### <a href="https://github.com/HarshCodeK/regent">regent</a>
 
@@ -107,35 +107,35 @@ One OpenAI-compatible endpoint that routes to providers, records every call in a
 **The invariant:** *Every call is accounted for. Unknown price is flagged, not guessed.*
 
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
 ### <a href="https://github.com/HarshCodeK/proofsheet">proofsheet</a>
 
 **Verifiable engineering evidence for any repository.**
 
-Point it at a repo and it returns an evidence sheet â€” what's tested, what's documented, what would break â€” with a file:line citation for every claim.
+Point it at a repo and it returns an evidence sheet — what's tested, what's documented, what would break — with a file:line citation for every claim.
 
 `Python` `FastAPI` `Pydantic` `deterministic`
 
 **The invariant:** *A claim without a file citation is not a claim.*
 
 </td>
-<td width="33%" valign="top">
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### <a href="https://github.com/HarshCodeK/aegis">aegis</a>
 
 **Autonomous customer resolution agent with trust protocol.**
 
-Every action passes through: policy check â†’ dry-run â†’ commit â†’ verify â†’ auto-rollback on failure. Hand-rolled agent loop â€” no LangChain, no framework. Built at IIT Bhubaneswar hackathon.
+Every action passes through: policy check → dry-run → commit → verify → auto-rollback on failure. Hand-rolled agent loop — no LangChain, no framework. Built at IIT Bhubaneswar hackathon.
 
 `TypeScript` `Next.js 16` `Gemini API` `chaos injection`
 
 **The invariant:** *Agent cannot bypass policy. Failure triggers rollback.*
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
 ### <a href="https://github.com/HarshCodeK/holdfast">holdfast</a>
 
@@ -148,19 +148,6 @@ Three layers of defence: idempotency keys, guarded transactions with `select_for
 **The invariant:** *For a given resource and slot, exactly one hold wins.*
 
 </td>
-<td width="33%" valign="top" colspan="2">
-
-### <a href="https://harshkharavle.github.io">harshkharavle.github.io</a>
-
-**The portfolio is itself a system.**
-
-Case studies, evidence wall, and resume â€” all generated from each repository's own measured numbers. No metric on this page is typed by hand. Zero framework dependencies.
-
-`HTML` `CSS` `JS` `GitHub Pages` `zero framework`
-
-**The invariant:** *Every number traces to a repository's evidence.*
-
-</td>
 </tr>
 </table>
 
@@ -170,8 +157,8 @@ Case studies, evidence wall, and resume â€” all generated from each reposit
 
 | Metric | Value | Source |
 |---|---|---|
-| repos on profile | **9** | `gh repo list HarshCodeK` |
-| active repos | **9** | all unarchived |
+| repos on profile | **8** | `gh repo list HarshCodeK` |
+| active repos | **8** | all unarchived |
 | tests (recoup) | **153 passing** | `python -m pytest` in recoup |
 | tests (regent) | **32 passing, 99% coverage** | `python -m pytest --cov=src` in regent |
 | tests (proofsheet) | **9 passing** | `python -m pytest` in proofsheet |
@@ -183,10 +170,10 @@ Case studies, evidence wall, and resume â€” all generated from each reposit
 ## How I work
 
 ```
-deployed beats described    â€” every repo has a landing page and dashboard
-a number or it did not happen â€” EVIDENCE.md with reproduce commands
-tradeoffs are the deliverable â€” TRADEOFFS.md in every repo
-explainable or excluded      â€” EXPLAIN.md + AGENTS.md per repo
+deployed beats described    — every repo has a landing page and dashboard
+a number or it did not happen — EVIDENCE.md with reproduce commands
+tradeoffs are the deliverable — TRADEOFFS.md in every repo
+explainable or excluded      — EXPLAIN.md + AGENTS.md per repo
 ```
 
 ---
