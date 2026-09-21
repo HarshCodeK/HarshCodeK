@@ -20,7 +20,7 @@ Systems where trust is engineered, not claimed. Where the LLM can triage but can
 
 ---
 
-## S-Tier â€” Flagships
+## S-Tier Flagships
 
 <table>
 <tr>
@@ -55,7 +55,7 @@ Voice meeting agent, multi-model code orchestrator, RAG enterprise chatbot, hybr
 
 ---
 
-## A-Tier â€” Cross-Domain
+## A-Tier Cross-Domain
 
 <table>
 <tr>
@@ -90,7 +90,7 @@ OpenAI-compatible gateway that routes, observes, and accounts for AI workloads �
 
 ---
 
-## B-Tier â€” Supporting
+## B-Tier Supporting
 
 <table>
 <tr>
