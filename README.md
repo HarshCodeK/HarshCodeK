@@ -16,24 +16,20 @@ I build practical AI systems around **RAG, agents, multimodal AI, voice interfac
 
 ## Projects
 
-### RAG & AI Systems
+### RAG & Classification
 
-- [**hybrid-log-classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) — Hybrid ML/LLM system for intelligent log classification.
-- [**multimodal-financial-assistant**](https://github.com/HarshCodeK/multimodal-financial-assistant) — Multimodal assistant for financial information and analysis.
-- [**multi-agent-coder**](https://github.com/HarshCodeK/multi-agent-coder) — Multi-agent coding system for orchestrating AI models.
-- [**rag-rbac-chatbot**](https://github.com/HarshCodeK/rag-rbac-chatbot) — RAG chatbot with role-based access control.
-- [**voice-agent-prototype**](https://github.com/HarshCodeK/voice-agent-prototype) — Voice-based AI agent prototype.
+- [**hybrid-log-classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) — Three-tier log classification: regex → ML → LLM, with confidence-based routing and FastAPI + Streamlit interface.
+- [**multimodal-financial-assistant**](https://github.com/HarshCodeK/multimodal-financial-assistant) — Document Q&A over financial PDFs/images using vision extraction, RAG, and structured LLM outputs.
 
-### Other Systems
+### AI Infrastructure
 
-- [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — AI operating layer for routing, observing, and managing AI workloads.
-- [**recoup**](https://github.com/HarshCodeK/recoup) — Deterministic payment reconciliation system with AI-assisted triage.
-- [**megaproject**](https://github.com/HarshCodeK/megaproject) — Unified AI agent system combining multiple AI capabilities.
-- [**HarshCodeK**](https://github.com/HarshCodeK/HarshCodeK) — This profile.
+- [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — OpenAI-compatible AI gateway with provider fallback, SHA-256 auth, telemetry, and usage tracking.
+- [**recoup**](https://github.com/HarshCodeK/recoup) — Deterministic multi-source reconciliation control plane with policy-gated recovery, LLM triage (classify-only), and SHA-256 hash-chained audit log. MCP-compatible. 153 tests, F1 0.805 on 3000-txn eval.
+- [**megaproject**](https://github.com/HarshCodeK/megaproject) — AI agent runtime with 7 tool-calling operators, workspace sandbox, MCP server, RAG knowledge base, and graceful offline degradation.
 
 ---
 
 ## Tech
 
-**Python · TypeScript · SQL · FastAPI · Django · React · Next.js · PostgreSQL · SQLite · RAG · LLMs · AI Agents · Git · Docker**
+**Python · FastAPI · Streamlit · SQLite · RAG · LLMs · AI Agents · MCP · Docker · Git**
 
