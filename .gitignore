@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/ venv/ node_modules/
+.env .env.local
+*.db *.sqlite3
+.pytest_cache/ .ruff_cache/ .coverage htmlcov/
+EVIDENCE.json
+.DS_Store Thumbs.db
