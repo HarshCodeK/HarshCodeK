@@ -24,7 +24,7 @@ Tier L, domain personal product site. Stack: Static HTML/CSS/JS, Node build scri
 ## Current state
 
 - Slice 1: landing with evidence wall and tier sections, case-study template, resume page with print CSS, JSON-LD and llms.txt, aggregator tests
-- Current: 5 live repositories listed, all figures measured 2026-10-02, 8 tests passing.
+- Current: 5 repositories listed, all figures measured 2026-10-03, 8 tests passing.
 
 ## Layout
 

@@ -15,7 +15,7 @@ Pages, no framework, no build dependency.
 - Repositories listed: 5 — hybrid-log-classifier, multimodal-financial-assistant,
   megaproject, kay-kay, recoup
 - Every figure in `data/evidence.json` carries the command that reproduces it,
-  measured 2026-10-02
+  measured 2026-10-03
 
 ## 3. Landmines
 
@@ -35,10 +35,21 @@ Print /resume.html to PDF and check it renders on one page. Then deploy.
 
 ## 5. Open questions
 
-- The site lists recoup (153 tests, F1 0.805) but it is not on the PDF resume
+- The site lists recoup (162 tests, F1 0.805) but it is not on the PDF resume
   used for applications. Decide whether to add it there.
 
 ## 6. Session entries (newest first)
+
+### 2026-10-03 - sibling repositories rebuilt, evidence regenerated
+
+The five sibling repositories were rebuilt with clean histories and their model
+registries updated to production ids (`openai/gpt-oss-120b` default; the retired
+llama ids 404 on this account). Two live bugs were found and fixed while testing
+against the real API: the log classifier's LLM tier crashed on the current Groq
+SDK response type, and the agent's `list_dir`/`read_file`/`grep` rejected an
+empty path the model sometimes sends. Every figure here was re-measured after
+those fixes; README no longer claims repos are "live" or that recoup ships a
+Docker image.
 
 ### 2026-10-02 - removed dead repositories, corrected measured numbers
 Did: removed six panels for deleted repositories (fiduciary, regent, proofsheet,

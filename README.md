@@ -2,7 +2,7 @@
 
 # Harsh Paresh Kharavle
 
-**AI Systems Engineer · Backend · Applied AI**
+**Business Intelligence Analyst | AI Systems & Automations**
 
 I build AI systems that stay honest under scrutiny — retrieval that refuses to
 guess, agents that run inside a sandbox, and infrastructure that accounts for
@@ -17,8 +17,9 @@ every token it spends.
 
 ## Projects
 
-Every repository below is live, has passing tests in CI, and builds its own
-Docker image. Numbers below were measured on 2026-10-02.
+Every repository below passes its test suite on a fresh clone. Numbers below
+were measured on 2026-10-03. All except recoup ship a Dockerfile whose CI
+build is green.
 
 ### AI Systems
 
@@ -29,7 +30,7 @@ Docker image. Numbers below were measured on 2026-10-02.
 ### Infrastructure
 
 - [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — An OpenAI-compatible gateway: provider fallback, hashed API keys, per-request telemetry and spend caps. Runs a bounded tool-calling agent *through itself*, so agent spend is capped and logged like any other call. **29 tests.**
-- [**recoup**](https://github.com/HarshCodeK/recoup) — A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log. **153 tests.**
+- [**recoup**](https://github.com/HarshCodeK/recoup) — A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log. **162 tests.**
 
 ---
 
