@@ -2,11 +2,9 @@
 
 # Harsh Paresh Kharavle
 
-**Business Intelligence Analyst | AI Systems & Automations**
+**AI Systems Engineer | Applied AI & Backend**
 
-I build AI systems that stay honest under scrutiny — retrieval that refuses to
-guess, agents that run inside a sandbox, and infrastructure that accounts for
-every token it spends.
+I build applied AI systems with explicit trust boundaries: retrieval that can refuse to guess, agents with constrained tools, and AI infrastructure with measurable request costs.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-harsh--k--422932284-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/harsh-k-422932284/)
 [![Email](https://img.shields.io/badge/Email-harsh.kharavle@gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:harsh.kharavle@gmail.com)
@@ -18,8 +16,7 @@ every token it spends.
 ## Projects
 
 Every repository below passes its test suite on a fresh clone. Numbers below
-were measured on 2026-10-03. All except recoup ship a Dockerfile whose CI
-build is green.
+were measured on 2026-10-03. The latest repository checks were used to verify the listed project descriptions; Recoup is tested locally and does not currently ship a Dockerfile.
 
 ### AI Systems
 
@@ -29,7 +26,7 @@ build is green.
 
 ### Infrastructure
 
-- [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — An OpenAI-compatible gateway: provider fallback, hashed API keys, per-request telemetry and spend caps. Runs a bounded tool-calling agent *through itself*, so agent spend is capped and logged like any other call. **29 tests.**
+- [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — An OpenAI-compatible gateway: provider fallback, hashed API keys, per-request telemetry and spend caps. Runs a bounded tool-calling agent whose provider turns pass through the same metered accounting path. **29 tests.**
 - [**recoup**](https://github.com/HarshCodeK/recoup) — A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log. **162 tests.**
 
 ---
@@ -41,10 +38,6 @@ sentence-transformers · RAG · LLM Applications · AI Agents · Docker · Git**
 
 ---
 
-## A note on the numbers
+## A note on the evidence
 
-The claim I care about most is a negative one: my financial assistant declines to
-answer when the retrieved policy does not support an answer, and my log
-classifier reports 0.833 rather than the 1.000 a leaky split produces. Both are
-the result of measuring instead of assuming — and both are easy for a sceptical
-interviewer to check, which is the point.
+The strongest claims in these projects are intentionally narrow: grouped evaluation rather than a leaky random split for the log classifier, question-conditioned policy retrieval for the financial assistant, and bounded provider accounting for KAY-KAY. Each is backed by repository code and tests rather than a generic AI claim.
