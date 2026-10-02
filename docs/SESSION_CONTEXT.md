@@ -29,9 +29,9 @@ Pages, no framework, no build dependency.
   tests with a description of an architecture it no longer had. Both corrected
   against measured runs.
 
-## 4. Next action (REQUIRED - one concrete step)
+## 4. Next action
 
-Print /resume.html to PDF and check it renders on one page. Then deploy.
+Keep /resume.html aligned with the repository evidence and print to PDF before applications. The portfolio CI gate is test-only unless a checked-in smoke script is added.
 
 ## 5. Open questions
 
