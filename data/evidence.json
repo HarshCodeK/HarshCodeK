@@ -1,0 +1,301 @@
+[
+  {
+    "repo": "hybrid-log-classifier",
+    "tier": "A",
+    "domain": "three-tier log classification / incident grouping",
+    "gate": {
+      "tests_passed": 27,
+      "tests_failed": 0,
+      "pytest_exit": 0,
+      "ci": "green",
+      "docker": "built and health-checked in CI",
+      "note": "LLM tier verified live against Groq with a production model id (openai/gpt-oss-120b); the previous default was flagged preview in docs."
+    },
+    "headline": [
+      {
+        "label": "tests passing",
+        "value": "27 + 14 Java",
+        "command": "python -m pytest tests/ -q; cd java && mvn test",
+        "tone": "accent"
+      },
+      {
+        "label": "ML accuracy (honest)",
+        "value": "0.833",
+        "command": "python train.py",
+        "tone": "info"
+      },
+      {
+        "label": "random-split (leaky)",
+        "value": "1.000",
+        "command": "python train.py",
+        "tone": ""
+      }
+    ],
+    "rows": [
+      {
+        "metric": "python tests",
+        "value": 27,
+        "command": "python -m pytest tests/ -q"
+      },
+      {
+        "metric": "java tests",
+        "value": 14,
+        "command": "cd java && mvn test"
+      },
+      {
+        "metric": "template-grouped accuracy",
+        "value": 0.833,
+        "command": "python train.py"
+      },
+      {
+        "metric": "java/python agreement",
+        "value": "6 incidents",
+        "command": "CI cross-check step"
+      },
+      {
+        "metric": "llm tier live call",
+        "value": "Resource Usage, $0.000115",
+        "command": "from src.pipeline import classify_one; classify_one(ambiguous_line)"
+      }
+    ],
+    "source": "hybrid-log-classifier\\EVIDENCE.json"
+  },
+  {
+    "repo": "kay-kay",
+    "tier": "A",
+    "domain": "OpenAI-compatible LLM gateway / spend governance",
+    "gate": {
+      "tests_passed": 29,
+      "tests_failed": 0,
+      "pytest_exit": 0,
+      "ci": "green",
+      "docker": "built and started in CI",
+      "note": "Agent loop verified live with openai/gpt-oss-120b (2 rounds, tool call logged). Default model registry moved to production ids; qwen flagged preview."
+    },
+    "headline": [
+      {
+        "label": "tests passing",
+        "value": "29",
+        "command": "python -m pytest tests/ -q",
+        "tone": "accent"
+      },
+      {
+        "label": "innerHTML in dashboard",
+        "value": "0",
+        "command": "grep -c innerHTML src/dashboard.py",
+        "tone": "info"
+      },
+      {
+        "label": "CI",
+        "value": "green",
+        "command": "gh run list",
+        "tone": ""
+      }
+    ],
+    "rows": [
+      {
+        "metric": "tests passing",
+        "value": 29,
+        "command": "python -m pytest tests/ -q"
+      },
+      {
+        "metric": "provider fallback chain",
+        "value": "yes",
+        "command": "grep PROVIDER_CHAIN src/config.py"
+      },
+      {
+        "metric": "API-key auth (SHA-256)",
+        "value": "yes",
+        "command": "grep sha256 src/auth.py"
+      },
+      {
+        "metric": "spend caps (HTTP 402)",
+        "value": "yes",
+        "command": "grep 402 src/gateway.py"
+      },
+      {
+        "metric": "tool-calling agent",
+        "value": "yes",
+        "command": "grep '/v1/agent' src/gateway.py"
+      },
+      {
+        "metric": "innerHTML in shipped dashboard",
+        "value": 0,
+        "command": "grep -c innerHTML src/dashboard.py"
+      }
+    ],
+    "source": "kay-kay\\EVIDENCE.json"
+  },
+  {
+    "repo": "megaproject",
+    "tier": "S",
+    "domain": "sandboxed tool-calling agent / offline degradation",
+    "gate": {
+      "tests_passed": 38,
+      "tests_failed": 0,
+      "pytest_exit": 0,
+      "ci": "green",
+      "docker": "built and health-checked in CI",
+      "note": "Agent loop verified live with openai/gpt-oss-120b (readonly, tool trace intact). Registry moved to production ids; empty-path tool args normalize gracefully."
+    },
+    "headline": [
+      {
+        "label": "tests passing",
+        "value": "38",
+        "command": "python -m pytest tests/ -q",
+        "tone": "accent"
+      },
+      {
+        "label": "sandboxed tools",
+        "value": "7",
+        "command": "grep TOOLS src/tools.py",
+        "tone": "info"
+      },
+      {
+        "label": "CI",
+        "value": "green",
+        "command": "gh run list",
+        "tone": ""
+      }
+    ],
+    "rows": [
+      {
+        "metric": "tests passing",
+        "value": 38,
+        "command": "python -m pytest tests/ -q"
+      },
+      {
+        "metric": "sandboxed tools",
+        "value": 7,
+        "command": "grep TOOLS src/tools.py"
+      },
+      {
+        "metric": "degradation modes",
+        "value": 4,
+        "command": "grep -o 'agent_[a-z_]*' src/agent.py | sort -u"
+      },
+      {
+        "metric": "escape vectors tested",
+        "value": 5,
+        "command": "grep -c 'raises(workspace.SandboxError)' tests/test_sandbox.py"
+      },
+      {
+        "metric": "chromadb + local embeddings",
+        "value": "yes",
+        "command": "grep chromadb src/rag.py"
+      }
+    ],
+    "source": "megaproject\\EVIDENCE.json"
+  },
+  {
+    "repo": "multimodal-financial-assistant",
+    "tier": "A",
+    "domain": "multimodal extraction / grounded RAG",
+    "gate": {
+      "tests_passed": 14,
+      "tests_failed": 0,
+      "pytest_exit": 0,
+      "ci": "green",
+      "docker": "built and health-checked in CI",
+      "note": "Pipeline verified live against Groq with qwen/qwen3.8-27b (2026-10-03): extraction, ChromaDB retrieval, grounded answer with source citation."
+    },
+    "headline": [
+      {
+        "label": "tests passing",
+        "value": "14",
+        "command": "python -m pytest tests/ -q",
+        "tone": "accent"
+      },
+      {
+        "label": "vision extraction",
+        "value": "1355 ms",
+        "command": "measured live",
+        "tone": "info"
+      },
+      {
+        "label": "vector store",
+        "value": "ChromaDB",
+        "command": "grep chromadb requirements.txt",
+        "tone": ""
+      }
+    ],
+    "rows": [
+      {
+        "metric": "tests passing",
+        "value": 14,
+        "command": "python -m pytest tests/ -q"
+      },
+      {
+        "metric": "policy chunks embedded",
+        "value": 6,
+        "command": "kb.ingest()"
+      },
+      {
+        "metric": "vision extraction latency",
+        "value": "1355 ms",
+        "command": "measured live"
+      }
+    ],
+    "source": "multimodal-financial-assistant\\EVIDENCE.json"
+  },
+  {
+    "repo": "recoup",
+    "tier": "S",
+    "domain": "multi-source payment reconciliation control plane",
+    "gate": {
+      "tests_passed": 162,
+      "tests_failed": 0,
+      "pytest_exit": 0,
+      "ci": "local only (no CI configured)",
+      "docker": "none"
+    },
+    "headline": [
+      {
+        "label": "eval F1",
+        "value": "0.805",
+        "command": "PYTHONPATH=. python eval.py",
+        "tone": "accent"
+      },
+      {
+        "label": "tests passing",
+        "value": "162",
+        "command": "python -m pytest tests/ -q",
+        "tone": "info"
+      },
+      {
+        "label": "recovery recall",
+        "value": "0.999",
+        "command": "PYTHONPATH=. python eval.py",
+        "tone": ""
+      }
+    ],
+    "rows": [
+      {
+        "metric": "offline test suite",
+        "value": 162,
+        "command": "python -m pytest tests/ -q"
+      },
+      {
+        "metric": "eval precision (3000 txns, seed=42)",
+        "value": 0.674,
+        "command": "PYTHONPATH=. python eval.py"
+      },
+      {
+        "metric": "eval recall",
+        "value": 0.999,
+        "command": "PYTHONPATH=. python eval.py"
+      },
+      {
+        "metric": "eval F1",
+        "value": 0.805,
+        "command": "PYTHONPATH=. python eval.py"
+      },
+      {
+        "metric": "policy-blocked recoveries",
+        "value": 531,
+        "command": "PYTHONPATH=. python eval.py"
+      }
+    ],
+    "source": "recoup\\EVIDENCE.json"
+  }
+]

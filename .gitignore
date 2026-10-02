@@ -4,5 +4,5 @@ __pycache__/
 .env .env.local
 *.db *.sqlite3
 .pytest_cache/ .ruff_cache/ .coverage htmlcov/
-EVIDENCE.json
+/EVIDENCE.json
 .DS_Store Thumbs.db
