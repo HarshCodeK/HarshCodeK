@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>harshkharavle.github.io dashboard</title>
+<link rel="stylesheet" href="assets/house.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="name">harshkharavle.github.io</span>
+  <span class="chip tier-L">L tier</span>
+  <nav><a href="index.html">Overview</a><a href="https://github.com/HarshCodeK/harshkharavle.github.io">Code</a></nav>
+</div></header>
+
+<div class="wrap">
+  <div class="hero" style="padding-bottom:18px">
+    <h1 style="font-size:30px">Evidence wall</h1>
+    <p class="lead" style="font-size:16px">One row per repository, straight from its EVIDENCE.json. Nothing typed by hand.</p>
+  </div>
+  <section style="border-top:none;padding-top:0"><div class="evidence" id="kpis"></div></section>
+  <section><h2>Distribution</h2>
+    <div class="panel"><div class="bars" id="bars"></div></div></section>
+  <section><h2>Matrix</h2>
+    <div class="panel" id="heat"></div></section>
+
+  <section>
+    <h2>All numbers</h2>
+    <div id="rows" class="panel"></div>
+  </section>
+</div>
+
+<footer><div class="wrap"><div class="row">
+  <span class="muted small">every panel reads real output only</span>
+  <a href="index.html">overview</a>
+</div></div></footer>
+
+<script type="module" src="assets/dashboard.js"></script>
+</body>
+</html>
