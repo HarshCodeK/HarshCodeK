@@ -29,21 +29,15 @@
 <body>
 <div class="sheet">
   <h1>Harsh Paresh Kharavle</h1>
-  <div class="contact">AI Systems Engineer (2027 graduate) - Python / Java / Backend / Applied AI<br>
+  <div class="contact">AI Systems Engineer - Python / Java / Backend / Applied AI<br>
   harsh.kharavle@gmail.com - github.com/HarshCodeK - linkedin.com/in/harsh-k-422932284</div>
 
   <h2>Measured highlights</h2>
   <ul>
-    <li><b>122 automated tests across four AI systems</b> (108 Python, 14 Java), all passing in CI on
-    Linux, with every Docker image built and started by the pipeline itself.</li>
-    <li><b>A log classifier that reports 0.833, not 1.000.</b> A random split over template-generated
-    training data leaks; holding out whole templates gives the real number. The training script prints
-    both and labels the flattering one as leakage.</li>
-    <li><b>A RAG system that declines to answer.</b> Asked why a charge was high with no supporting
-    policy in the corpus, it says the documents do not cover it, and cites what they do say. An invented
-    reason about money is worse than no answer.</li>
-    <li><b>A gateway whose agent cannot overspend.</b> The agent calls the gateway rather than the
-    provider directly, so its turns are subject to the same spend caps and land in the same telemetry.</li>
+    <li><b>122 automated tests across four AI systems</b> (108 Python, 14 Java), with repository-level test suites and Dockerfiles where implemented.</li>
+    <li><b>A log classifier evaluated with grouped template holdouts.</b> The training script reports the random-split figure only as a leakage contrast, then trains the deployment model on the full dataset after grouped cross-validation.</li>
+    <li><b>A policy-grounded financial assistant.</b> Retrieval is conditioned on the user question and supporting document context; the system is explicit when the corpus does not cover the question.</li>
+    <li><b>A gateway with conservative pre-request spend reservations.</b> Each agent provider turn is metered through the gateway accounting path, with bounded output tokens and atomic SQLite reservations.</li>
   </ul>
 
   <h2>Projects</h2>
@@ -51,14 +45,11 @@
     <li><span class="role">hybrid-log-classifier</span> <span class="meta">Python, scikit-learn, FastAPI, Java</span><br>
     Three-tier log classification &mdash; regex, then ML, then LLM &mdash; where the ML tier abstains
     rather than guessing, so the cost saving is verifiable rather than asserted. Lines sharing an entity
-    inside a 300-second window collapse into ranked incidents. A Java implementation of the same rule is
-    cross-checked against the Python one on every CI run; they agree on all six incidents.
+    inside a 300-second window collapse into ranked incidents. A Java implementation of the same incident-grouping rule is cross-checked against the Python implementation in CI.
     <b>27 Python + 14 JUnit tests.</b></li>
 
     <li><span class="role">multimodal-financial-assistant</span> <span class="meta">Python, ChromaDB, sentence-transformers, Groq</span><br>
-    Reads a receipt or invoice, extracts structured fields with a vision model, and retrieves the
-    governing policy from a ChromaDB vector store. Local embeddings mean retrieval works offline and
-    costs nothing. Answers cite the document they came from. <b>14 tests.</b></li>
+    Reads images with a vision model and parses text-based PDFs, then retrieves policy context from ChromaDB using the user question plus document fields. <b>14 tests.</b></li>
 
     <li><span class="role">megaproject</span> <span class="meta">Python, FastAPI, ChromaDB</span><br>
     A sandboxed tool-calling agent. The model is untrusted: every path is resolved with <code>realpath</code>
@@ -73,15 +64,15 @@
 
     <li><span class="role">recoup</span> <span class="meta">Python, SQLite</span><br>
     A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log and
-    policy-gated recovery. <b>153 tests, F1 0.805 on a 3,000-transaction evaluation.</b></li>
+    policy-gated recovery. <b>162 tests.</b> Pair-level matching metrics are reported by the current evaluator and regenerated as part of the evaluation command.</li>
   </ul>
 
   <h2>Skills</h2>
   <ul>
     <li><b>Languages:</b> Python (FastAPI, Streamlit, pytest, scikit-learn), Java (JUnit 5, Maven), SQL</li>
     <li><b>AI systems:</b> retrieval-augmented generation with ChromaDB and local embeddings, tool-calling
-    agents, LLM gateways with routing and spend caps, prompt engineering, structured outputs, multimodal
-    extraction, evaluation harnesses</li>
+    agents, LLM gateways with provider routing and conservative spend reservations, structured outputs,
+    multimodal extraction, evaluation harnesses</li>
     <li><b>Backend:</b> FastAPI and REST APIs, SQLite, provider fallback and retry semantics, circuit
     breakers, sandboxing and trust boundaries, secret redaction, cost accounting</li>
     <li><b>Practice:</b> test-driven development, CI pipelines that build and start the artifact, Git,
@@ -96,7 +87,7 @@
   </ul>
 
   <p class="small muted" style="margin-top:22px">Every test count above is reproducible: run
-  <code>python -m pytest tests/ -q</code> in the linked repository. Figures measured 2026-10-02.</p>
+  <code>python -m pytest tests/ -q</code> in the linked repository. Figures are maintained against the current repository state; rerun the linked project tests/evaluations before submitting the resume.</p>
 </div>
 <script>console.log("print this page to PDF: Ctrl+P, save as PDF, margins default");</script>
 </body>
