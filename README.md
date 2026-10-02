@@ -21,7 +21,7 @@ Project descriptions below are derived from repository code and test files; curr
 
 - [**megaproject**](https://github.com/HarshCodeK/megaproject) — A sandboxed tool-calling agent. The model is untrusted: every path is resolved and checked before any I/O, commands run from an allowlist, and secrets are redacted from tool output. A circuit breaker degrades to retrieval-only instead of failing. **automated test suite included.**
 - [**hybrid-log-classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) — Three-tier log classification where the ML tier **abstains** instead of guessing, so the cost saving is verifiable. Lines sharing an entity inside a 300-second window collapse into ranked incidents. A Java implementation is cross-checked against the Python one on every CI run. **Python and Java test suites included.**
-- [**multimodal-financial-assistant**](https://github.com/HarshCodeK/multimodal-financial-assistant) — Vision extraction plus ChromaDB retrieval that **refuses to answer when the policy does not cover the question**. An invented reason about money is worse than no answer. **automated test suite included.**
+- [**multimodal-financial-assistant**](https://github.com/HarshCodeK/multimodal-financial-assistant) — Vision/text document extraction plus ChromaDB policy retrieval with explicit refusal behavior when the retrieved context does not cover the question. **automated test suite included.**
 
 ### Infrastructure
 
