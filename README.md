@@ -15,19 +15,18 @@ I build applied AI systems with explicit trust boundaries: retrieval that can re
 
 ## Projects
 
-Every repository below passes its test suite on a fresh clone. Numbers below
-were measured on 2026-10-03. The latest repository checks were used to verify the listed project descriptions; Recoup is tested locally and does not currently ship a Dockerfile.
+Project descriptions below are derived from repository code and test files; current CI status is maintained by each repository. The latest repository checks were used to verify the listed project descriptions; Recoup is tested locally and does not currently ship a Dockerfile.
 
 ### AI Systems
 
-- [**megaproject**](https://github.com/HarshCodeK/megaproject) — A sandboxed tool-calling agent. The model is untrusted: every path is resolved and checked before any I/O, commands run from an allowlist, and secrets are redacted from tool output. A circuit breaker degrades to retrieval-only instead of failing. **38 tests.**
-- [**hybrid-log-classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) — Three-tier log classification where the ML tier **abstains** instead of guessing, so the cost saving is verifiable. Lines sharing an entity inside a 300-second window collapse into ranked incidents. A Java implementation is cross-checked against the Python one on every CI run. **27 Python + 14 JUnit tests.**
-- [**multimodal-financial-assistant**](https://github.com/HarshCodeK/multimodal-financial-assistant) — Vision extraction plus ChromaDB retrieval that **refuses to answer when the policy does not cover the question**. An invented reason about money is worse than no answer. **14 tests.**
+- [**megaproject**](https://github.com/HarshCodeK/megaproject) — A sandboxed tool-calling agent. The model is untrusted: every path is resolved and checked before any I/O, commands run from an allowlist, and secrets are redacted from tool output. A circuit breaker degrades to retrieval-only instead of failing. **automated test suite included.**
+- [**hybrid-log-classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) — Three-tier log classification where the ML tier **abstains** instead of guessing, so the cost saving is verifiable. Lines sharing an entity inside a 300-second window collapse into ranked incidents. A Java implementation is cross-checked against the Python one on every CI run. **Python and Java test suites included.**
+- [**multimodal-financial-assistant**](https://github.com/HarshCodeK/multimodal-financial-assistant) — Vision extraction plus ChromaDB retrieval that **refuses to answer when the policy does not cover the question**. An invented reason about money is worse than no answer. **automated test suite included.**
 
 ### Infrastructure
 
-- [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — An OpenAI-compatible gateway: provider fallback, hashed API keys, per-request telemetry and spend caps. Runs a bounded tool-calling agent whose provider turns pass through the same metered accounting path. **29 tests.**
-- [**recoup**](https://github.com/HarshCodeK/recoup) — A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log. **162 tests.**
+- [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — An OpenAI-compatible gateway: provider fallback, hashed API keys, per-request telemetry and spend caps. Runs a bounded tool-calling agent whose provider turns pass through the same metered accounting path. **automated test suite included.**
+- [**recoup**](https://github.com/HarshCodeK/recoup) — A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log. **automated test suite included.**
 
 ---
 
