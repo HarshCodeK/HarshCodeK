@@ -1,0 +1,9 @@
+# Harsh Kharavle - portfolio evidence
+
+Every line below is generated from a repository's own EVIDENCE.json.
+
+- hybrid-log-classifier (A tier, three-tier log classification / incident grouping): 27 tests passing; source: hybrid-log-classifier\EVIDENCE.json
+- kay-kay (A tier, OpenAI-compatible LLM gateway / spend governance): 29 tests passing; source: kay-kay\EVIDENCE.json
+- megaproject (S tier, sandboxed tool-calling agent / offline degradation): 38 tests passing; source: megaproject\EVIDENCE.json
+- multimodal-financial-assistant (A tier, multimodal extraction / grounded RAG): 14 tests passing; source: multimodal-financial-assistant\EVIDENCE.json
+- recoup (S tier, multi-source payment reconciliation control plane): 162 tests passing; source: recoup\EVIDENCE.json
