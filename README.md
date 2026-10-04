@@ -1,42 +1,39 @@
-<div align="center">
+# Harsh Kharavle
 
-# Harsh Paresh Kharavle
+**B.Tech CSE · AI/ML/Robotics · Software Engineering + AI Systems**
 
-**AI Systems Engineer | Applied AI & Backend**
+I build practical AI-enabled software with explicit trust boundaries, deterministic controls, and evidence-backed engineering.
 
-I build applied AI systems with explicit trust boundaries: retrieval that can refuse to guess, agents with constrained tools, and AI infrastructure with measurable request costs.
+## Selected work
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-harsh--k--422932284-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/harsh-k-422932284/)
-[![Email](https://img.shields.io/badge/Email-harsh.kharavle@gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:harsh.kharavle@gmail.com)
+| Project | What it demonstrates |
+|---|---|
+| **Recoup** | Deterministic payment reconciliation, integer-money modeling, policy-gated recovery, tamper-evident audit chain |
+| **MegaProject** | Sandboxed tool-calling agent, path containment, read-only tool allowlist, bounded agent loop |
+| **KAY-KAY** | OpenAI-compatible gateway, provider fallback, API-key authentication, spend reservation, telemetry |
+| **Hybrid Log Classifier** | Rules → ML → LLM classification with abstention and incident grouping |
+| **Multimodal Financial Assistant** | PDF provenance, ChromaDB retrieval, grounded refusal, image/vision path |
 
-</div>
+## Engineering principles
 
----
+- Deterministic controls around probabilistic components.
+- AI can assist a decision without automatically owning the action.
+- Security boundaries are documented with their limitations.
+- Claims should be reproducible from code or tests.
+- Simple architecture first; complexity only when it buys a real property.
 
-## Projects
+## Stack
 
-Project descriptions below are derived from repository code and test files; current CI status is maintained by each repository. The latest repository checks were used to verify the listed project descriptions; Recoup is tested locally and does not currently ship a Dockerfile.
+Python · FastAPI · scikit-learn · Pydantic · SQLite · ChromaDB · sentence-transformers · RAG · LLM applications · AI agents · Docker · Git
 
-### AI Systems
+## Repositories
 
-- [**megaproject**](https://github.com/HarshCodeK/megaproject) — A sandboxed tool-calling agent. The model is untrusted: every path is resolved and checked before any I/O, commands run from an allowlist, and secrets are redacted from tool output. A circuit breaker degrades to retrieval-only instead of failing. **automated test suite included.**
-- [**hybrid-log-classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) — Three-tier log classification where the ML tier **abstains** instead of guessing, so the cost saving is verifiable. Lines sharing an entity inside a 300-second window collapse into ranked incidents. A Java implementation is cross-checked against the Python one on every CI run. **Python and Java test suites included.**
-- [**multimodal-financial-assistant**](https://github.com/HarshCodeK/multimodal-financial-assistant) — Vision/text document extraction plus ChromaDB policy retrieval with explicit refusal behavior when the retrieved context does not cover the question. **automated test suite included.**
+- [Hybrid Log Classifier](https://github.com/HarshCodeK/Repo-1)
+- [Multimodal Financial Assistant](https://github.com/HarshCodeK/Repo-2)
+- [KAY-KAY](https://github.com/HarshCodeK/Repo-3)
+- [MegaProject](https://github.com/HarshCodeK/Repo-4)
+- [Recoup](https://github.com/HarshCodeK/Repo-5)
 
-### Infrastructure
+> These repositories are currently staged under Repo-1 … Repo-5 because repository renaming is an account-level GitHub operation not exposed by the connected GitHub tooling. The intended final names are shown above.
 
-- [**kay-kay**](https://github.com/HarshCodeK/kay-kay) — An OpenAI-compatible gateway: provider fallback, hashed API keys, per-request telemetry and spend caps. Runs a bounded tool-calling agent whose provider turns pass through the same metered accounting path. **automated test suite included.**
-- [**recoup**](https://github.com/HarshCodeK/recoup) — A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log. **automated test suite included.**
-
----
-
-## Tech
-
-**Python · Java · FastAPI · scikit-learn · Streamlit · SQLite · ChromaDB ·
-sentence-transformers · RAG · LLM Applications · AI Agents · Docker · Git**
-
----
-
-## A note on the evidence
-
-The strongest claims in these projects are intentionally narrow: grouped evaluation rather than a leaky random split for the log classifier, question-conditioned policy retrieval for the financial assistant, and bounded provider accounting for KAY-KAY. Each is backed by repository code and tests rather than a generic AI claim.
+[Portfolio](https://github.com/HarshCodeK/HarshCodeK) · [LinkedIn](https://www.linkedin.com/in/harsh-k-422932284/)
