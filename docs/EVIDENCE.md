@@ -10,9 +10,9 @@ It records only current repository facts that have an explicit verification comm
 |---|---:|---|
 | hybrid-log-classifier | 16 | `pytest -q` |
 | multimodal-financial-assistant | 6 | `pytest -q` |
-| kay-kay | 3 | `pytest -q` |
+| kay-kay | 5 | `pytest -q` |
 | megaproject | 3 | `pytest -q` |
-| recoup | 5 | `pytest -q` |
+| recoup | 6 | `pytest -q` |
 
 CI and Docker status are included in `data/evidence.json` only where previously verified.
 
