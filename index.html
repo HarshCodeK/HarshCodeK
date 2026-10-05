@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Harsh Kharavle — systems that prove themselves</title>
-<meta name="description" content="Portfolio of Harsh Paresh Kharavle: Five repositories, one standard - every claim has the command that reproduces it. Software engineer building control planes for AI systems.">
+<meta name="description" content="Portfolio of Harsh Paresh Kharavle: Five selected repositories, one standard - every claim has the command that reproduces it. Software engineer building control planes for AI systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,8 +34,8 @@
   <div class="hero">
     <span class="chip ok">open to SDE / AI engineering roles</span>
     <h1>I build <span class="accent">control planes</span> where trust is engineered, not claimed.</h1>
-    <p class="lead">Five repositories, one standard. Every claim carries the command that reproduces it.
-    Every repo has measured proof. Nothing is described as production-grade until it is.</p>
+    <p class="lead">Five selected repositories, one standard. Every published claim is tied to the current repository state.
+    Every repo has tests and explicit limitations. Nothing is described as production-grade.</p>
     <p class="for">B.Tech CSE fresher. Python, TypeScript, Django, FastAPI, React, SQLite/PostgreSQL.
     I build systems where AI can triage but cannot move money, where double-booking is structurally impossible,
     and where every number on this page traces back to a file in a repository.</p>
@@ -46,15 +46,15 @@
 
     <div class="hero-stats" style="margin-top:48px">
       <div class="stat-group">
-        <span class="stat-num" id="stat-repos">9</span>
+        <span class="stat-num" id="stat-repos">5</span>
         <span class="stat-label">repositories</span>
       </div>
       <div class="stat-group">
-        <span class="stat-num" id="stat-tests">200+</span>
+        <span class="stat-num" id="stat-tests">33</span>
         <span class="stat-label">tests passing</span>
       </div>
       <div class="stat-group">
-        <span class="stat-num" id="stat-tiers">99%</span>
+        <span class="stat-num" id="stat-tiers">0</span>
         <span class="stat-label">evidence verified</span>
       </div>
     </div>
@@ -78,7 +78,7 @@
         <button class="filter-btn" data-filter="A">A — Cross-Domain</button>
       </div>
     </div>
-    <p class="sub">Five repositories, one standard. Each has measured proof and a story that can be explained cold
+    <p class="sub">Five selected repositories. Each has a small, explainable architecture and explicit limits
     on a whiteboard. Every number on this page traces to a command.</p>
 
     <!-- S TIER -->
@@ -114,7 +114,7 @@
 
       <article class="panel reveal reveal-delay-1" data-tier="S">
         <h3><a href="https://github.com/HarshCodeK/megaproject">megaproject</a> <span class="tier-badge s">S</span></h3>
-        <p>A sandboxed tool-calling agent. The model is untrusted: every path is resolved and checked before any I/O, commands run from an allowlist, and secrets are redacted from tool output. When the provider drops, a circuit breaker opens and the system degrades to retrieval-only rather than failing.</p>
+        <p>A sandboxed tool-calling boundary. Paths are canonicalized before containment checks, and only read/list tools are exposed. This is an application-level path boundary, not OS isolation.</p>
         <div class="tech">
           <span>TypeScript</span><span>Python</span><span>FastAPI</span><span>Realtime</span><span>5 plugins</span>
         </div>
@@ -133,7 +133,7 @@
 
       <article class="panel reveal reveal-delay-1" data-tier="A">
         <h3><a href="https://github.com/HarshCodeK/kay-kay">kay-kay</a> <span class="tier-badge a">A</span></h3>
-        <p>An OpenAI-compatible gateway: change <code>base_url</code> and <code>api_key</code> in any client and get provider fallback, hashed API keys, per-request telemetry and spend caps. It also runs a bounded tool-calling agent <em>through itself</em>, so agent spend is capped and logged like any other call.</p>
+        <p>A small REST gateway with provider fallback, hashed API keys, conservative pre-request spend reservation, and request telemetry.</p>
         <div class="tech">
           <span>Python</span><span>FastAPI</span><span>SQLite</span><span>OpenAI-compatible</span><span>4-chapter roadmap</span>
         </div>
