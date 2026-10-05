@@ -34,10 +34,10 @@
 
   <h2>Measured highlights</h2>
   <ul>
-    <li><b>33 tests across five selected systems, with each current repository carrying an automated test suite</b>, with Python and Java coverage plus Dockerfiles where implemented.</li>
+    <li><b>33 tests across five selected systems, with each current repository carrying an automated test suite</b>, with Python coverage across the selected systems; Docker is used where implemented.</li>
     <li><b>A log classifier evaluated with grouped template holdouts.</b> The training script reports the random-split figure only as a leakage contrast, then trains the deployment model on the full dataset after grouped cross-validation.</li>
     <li><b>A policy-grounded financial assistant.</b> Retrieval is conditioned on the user question and supporting document context; the system is explicit when the corpus does not cover the question.</li>
-    <li><b>A gateway with conservative pre-request spend reservations.</b> Each agent provider turn is metered through the gateway accounting path, with bounded output tokens and atomic SQLite reservations.</li>
+    <li><b>A gateway with conservative pre-request spend reservations.</b> Provider fallback and usage telemetry are demonstrated with deterministic provider stubs; accounting is intentionally in memory in the current implementation.</li>
   </ul>
 
   <h2>Projects</h2>
@@ -51,7 +51,7 @@
     <li><span class="role">multimodal-financial-assistant</span> <span class="meta">Python, ChromaDB, sentence-transformers, Groq</span><br>
     Reads images with a vision model and parses text-based PDFs, then retrieves policy context from ChromaDB using the user question plus document fields. <b>6 tests.</b></li>
 
-    <li><span class="role">megaproject</span> <span class="meta">Python, FastAPI, ChromaDB</span><br>
+    <li><span class="role">megaproject</span> <span class="meta">Python, FastAPI</span><br>
     A sandboxed tool-calling boundary. Every path is resolved before containment is checked, and only read/list tools are exposed. The implementation explicitly does not claim OS-level sandboxing. <b>3 tests.</b></li>
 
     <li><span class="role">kay-kay</span> <span class="meta">Python, FastAPI, SQLite</span><br>
