@@ -5,10 +5,7 @@
   "description": "Portfolio site: an evidence wall built from each repository's measured numbers, and a printable resume at /resume.html.",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/serve.js",
-    "test": "node --test",
-    "evidence": "node scripts/evidence.js",
-    "serve": "node scripts/serve.js"
+    "test": "node --test"
   },
   "license": "MIT",
   "author": "Harsh Paresh Kharavle"
