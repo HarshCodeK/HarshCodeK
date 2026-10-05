@@ -8,9 +8,9 @@ I build practical AI-enabled software with explicit trust boundaries, determinis
 
 | Project | What it demonstrates |
 |---|---|
-| **Recoup** | Deterministic payment reconciliation, integer-money modeling, policy-gated recovery, tamper-evident audit chain |
-| **MegaProject** | Sandboxed tool-calling agent, path containment, read-only tool allowlist, bounded agent loop |
-| **KAY-KAY** | OpenAI-compatible gateway, provider fallback, API-key authentication, spend reservation, telemetry |
+| **Recoup** | Deterministic payment reconciliation, integer-money modeling, bounded matching, policy-gated recovery |
+| **MegaProject** | Sandboxed tool-calling boundary, path containment, read/list tool allowlist, bounded agent loop |
+| **KAY-KAY** | Small REST gateway, provider fallback, API-key hashing, conservative spend reservation, telemetry |
 | **Hybrid Log Classifier** | Rules → ML → LLM classification with abstention and incident grouping |
 | **Multimodal Financial Assistant** | PDF provenance, ChromaDB retrieval, grounded refusal, image/vision path |
 
@@ -34,6 +34,6 @@ Python · FastAPI · scikit-learn · Pydantic · SQLite · ChromaDB · sentence-
 - [MegaProject](https://github.com/HarshCodeK/Repo-4)
 - [Recoup](https://github.com/HarshCodeK/Repo-5)
 
-> These repositories are currently staged under Repo-1 … Repo-5 because repository renaming is an account-level GitHub operation not exposed by the connected GitHub tooling. The intended final names are shown above.
+ > The public targets are currently staged under Repo-1 … Repo-5. The legacy implementations remain separately archived as concept/reference repositories.
 
 [Portfolio](https://github.com/HarshCodeK/HarshCodeK) · [LinkedIn](https://www.linkedin.com/in/harsh-k-422932284/)
