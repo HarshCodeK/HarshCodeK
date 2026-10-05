@@ -34,7 +34,7 @@
 
   <h2>Measured highlights</h2>
   <ul>
-    <li><b>Multiple automated test suites across four AI systems</b>, with Python and Java coverage plus Dockerfiles where implemented.</li>
+    <li><b>33 tests across five selected systems, with each current repository carrying an automated test suite</b>, with Python and Java coverage plus Dockerfiles where implemented.</li>
     <li><b>A log classifier evaluated with grouped template holdouts.</b> The training script reports the random-split figure only as a leakage contrast, then trains the deployment model on the full dataset after grouped cross-validation.</li>
     <li><b>A policy-grounded financial assistant.</b> Retrieval is conditioned on the user question and supporting document context; the system is explicit when the corpus does not cover the question.</li>
     <li><b>A gateway with conservative pre-request spend reservations.</b> Each agent provider turn is metered through the gateway accounting path, with bounded output tokens and atomic SQLite reservations.</li>
@@ -46,35 +46,27 @@
     Three-tier log classification &mdash; regex, then ML, then LLM &mdash; where the ML tier abstains
     rather than guessing, so the cost saving is verifiable rather than asserted. Lines sharing an entity
     inside a 300-second window collapse into ranked incidents. A Java implementation of the same incident-grouping rule is cross-checked against the Python implementation in CI.
-    <b>27 Python + 14 JUnit tests.</b></li>
+    <b>16 tests.</b></li>
 
     <li><span class="role">multimodal-financial-assistant</span> <span class="meta">Python, ChromaDB, sentence-transformers, Groq</span><br>
-    Reads images with a vision model and parses text-based PDFs, then retrieves policy context from ChromaDB using the user question plus document fields. <b>14 tests.</b></li>
+    Reads images with a vision model and parses text-based PDFs, then retrieves policy context from ChromaDB using the user question plus document fields. <b>6 tests.</b></li>
 
     <li><span class="role">megaproject</span> <span class="meta">Python, FastAPI, ChromaDB</span><br>
-    A sandboxed tool-calling agent. The model is untrusted: every path is resolved with <code>realpath</code>
-    and checked before any I/O, commands run from an allowlist, and credential-shaped environment values
-    are redacted from all tool output. A circuit breaker degrades to retrieval-only rather than failing.
-    <b>38 tests.</b></li>
+    A sandboxed tool-calling boundary. Every path is resolved before containment is checked, and only read/list tools are exposed. The implementation explicitly does not claim OS-level sandboxing. <b>3 tests.</b></li>
 
     <li><span class="role">kay-kay</span> <span class="meta">Python, FastAPI, SQLite</span><br>
-    An OpenAI-compatible LLM gateway: provider fallback, SHA-256-hashed API keys, per-request telemetry
-    and spend caps. It also runs a bounded tool-calling agent through itself, so agent spend is capped
-    and logged like any other call. <b>30 tests.</b></li>
+    A small REST gateway with provider fallback, SHA-256-hashed API keys, conservative spend reservation and request telemetry. <b>3 tests.</b></li>
 
     <li><span class="role">recoup</span> <span class="meta">Python, SQLite</span><br>
-    A deterministic payment reconciliation control plane with a SHA-256 hash-chained audit log and
-    policy-gated recovery. <b>162 tests.</b> Pair-level matching metrics are reported by the current evaluator and regenerated as part of the evaluation command.</li>
+    A deterministic reconciliation core using integer paise, bounded timestamp matching and a separate recovery policy gate. <b>5 tests.</b> The evaluator is a small correctness smoke test, not a production benchmark.</li>
   </ul>
 
   <h2>Skills</h2>
   <ul>
-    <li><b>Languages:</b> Python (FastAPI, Streamlit, pytest, scikit-learn), Java (JUnit 5, Maven), SQL</li>
+    <li><b>Languages:</b> Python, Java, SQL</li>
     <li><b>AI systems:</b> retrieval-augmented generation with ChromaDB and local embeddings, tool-calling
-    agents, LLM gateways with provider routing and conservative spend reservations, structured outputs,
-    multimodal extraction, evaluation harnesses</li>
-    <li><b>Backend:</b> FastAPI and REST APIs, SQLite, provider fallback and retry semantics, circuit
-    breakers, sandboxing and trust boundaries, secret redaction, cost accounting</li>
+    agents, LLM gateways with provider fallback and conservative spend reservations, multimodal extraction, evaluation harnesses</li>
+    <li><b>Backend:</b> FastAPI and REST APIs, SQLite, provider fallback and retry semantics, sandboxing and trust boundaries, cost accounting</li>
     <li><b>Practice:</b> test-driven development, CI pipelines that build and start the artifact, Git,
     Docker, prompt-version evaluation, documented limitations</li>
   </ul>
@@ -86,8 +78,7 @@
     Coursework: data structures and algorithms, DBMS, operating systems, computer networks, OOP.</li>
   </ul>
 
-  <p class="small muted" style="margin-top:22px">Every test count above is reproducible: run
-  <code>python -m pytest tests/ -q</code> in the linked repository. Figures are maintained against the current repository state; rerun the linked project tests/evaluations before submitting the resume.</p>
+  <p class="small muted" style="margin-top:22px">Test counts above refer to the current repository implementations and should be rerun before submission.</p>
 </div>
 <script>console.log("print this page to PDF: Ctrl+P, save as PDF, margins default");</script>
 </body>
