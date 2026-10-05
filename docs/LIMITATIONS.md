@@ -1,24 +1,18 @@
-# Limitations - harshkharavle.github.io
+# Limitations
 
-> Read this before drawing conclusions from the README or the dashboard.
-> Every line is a commitment to a later week, not an oversight.
+## Current limitations
 
-## Not built
+| Area | Limitation |
+|---|---|
+| Evidence | Test counts are snapshots and should be rerun after repository changes. |
+| Project scope | The five selected repositories are portfolio-scale implementations, not production services. |
+| Security | MegaProject demonstrates an application-level path boundary, not OS/container isolation. |
+| AI reliability | Probabilistic components are bounded, but they are not guaranteed to be correct. |
+| Evaluation | Hybrid Log Classifier uses a small synthetic dataset; its metrics are not production benchmarks. |
+| Payments | Recoup does not execute money or authorize financial actions. |
 
-| Capability | Status | Why |
-|---|---|---|
-| Capability | Status | Why / when |
-|---|---|---|
-| No analytics or tracking | not built in slice 1 | scheduled in docs/PLAN_WEEKS.md |
-| No framework build step - the build is one readable script | not built in slice 1 | scheduled in docs/PLAN_WEEKS.md |
-| No invented metrics: if a repo has not measured it, the wall shows nothing | not built in slice 1 | scheduled in docs/PLAN_WEEKS.md |
+## Deliberate choices
 
-## Known design choices that are not bugs
-
-1. 1. Static files over a framework so the site outlives any framework churn
-2. Aggregation at build time rather than fetch time, so Pages has no runtime dependency on the repos
-3. JSON-LD and llms.txt so machine readers can cite the owner correctly
-
-## Method limits
-
-Slice 1 methods are deterministic and offline. Any statistical claim is only as strong as its sample, and the sample is documented in docs/EVIDENCE.md.
+1. Keep the portfolio static and dependency-light.
+2. Show only evidence that can be tied to a repository or explicit verification command.
+3. Prefer honest limitations over broader but unsupported project claims.
