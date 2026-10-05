@@ -1,23 +1,15 @@
-# Tradeoffs - harshkharavle.github.io
+# Tradeoffs
 
-> The governing constraint first, then what was rejected. This file exists because
-> implementation is cheap and judgement is not.
+## Portfolio-level choices
 
-## The governing constraint
-
-No build framework: the build script must be readable in one sitting, and the output must work as plain static files on GitHub Pages.
-
-## Decisions
-
-1. Static files over a framework so the site outlives any framework churn
-2. Aggregation at build time rather than fetch time, so Pages has no runtime dependency on the repos
-3. JSON-LD and llms.txt so machine readers can cite the owner correctly
+1. **Static site over a frontend framework** — the portfolio does not need application-state complexity.
+2. **Checked-in evidence manifest over live repository scraping** — the site remains deterministic and has no runtime dependency on GitHub APIs.
+3. **Manual claim review over elaborate generation** — the selected project descriptions are short enough to audit directly against the repositories.
+4. **Explicit limitations over inflated scope** — the profile describes what the current implementations actually do.
 
 ## Deliberate refusals
 
-1. Refused to hand-type any metric into the HTML
-2. Refused to add an analytics script
-
-## What would change my mind
-
-1. Add client-side search only when the case-study count makes findability a real problem
+- No invented production metrics.
+- No claim that an application-level sandbox is OS isolation.
+- No claim that a deterministic reconciliation core is a payment-execution system.
+- No claim that the smaller gateway and agent projects are production infrastructure.
