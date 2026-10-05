@@ -1,35 +1,32 @@
-# Architecture - harshkharavle.github.io
-
-## The one idea
-
-The site is a build product. It reads each repository EVIDENCE.json when it builds and refuses to render a number that has no source file behind it, so the site cannot drift from reality. It also emits JSON-LD and llms.txt so AI search surfaces the right facts.
+# Architecture
 
 ## Flow
 
 ```
-repo make evidence -> EVIDENCE.json -> build.js -> data/evidence.json -> pages + JSON-LD + llms.txt
+current repository state
+        ↓
+data/evidence.json
+        ↓
+index.html
+        ↓
+static portfolio page + project links
 ```
 
-## Modules
+## Components
 
-| Module | Responsibility | Must never do |
-|---|---|---|
-| Module | Responsibility | Must never do |
-|---|---|---|
-| scripts/build.js | aggregate and validate evidence | invent or estimate a number |
-| case/ | one page per repository | contain aggregate logic |
-| resume.html | printable, one page | link to unmeasured claims |
+| Component | Responsibility |
+|---|---|
+| `index.html` | Homepage, project summaries, evidence wall |
+| `resume.html` | Printable resume |
+| `data/evidence.json` | Checked-in verification facts |
+| `assets/house.css` | Shared visual styles |
+| `assets/house.js` | Small client-side helpers |
+| `tests/` | Static checks for links and markup |
+| `src/bench.js` | Small local metrics helper for the portfolio repository |
 
 ## Invariants
 
-1. No rendered number without a source file and a command
-2. A missing source renders as a refusal, not as a blank or a guess
-3. The build is deterministic: same inputs, same output bytes
-
-## Data
-
-evidence(repo, tier, headline[], rows[], generated_at, source_path)
-
-## Why these choices
-
-See [TRADEOFFS.md](TRADEOFFS.md) and [adr/](adr/) for the decision records.
+1. Project links point to the current repository names.
+2. Measured numbers shown by the evidence wall come from `data/evidence.json`.
+3. Project descriptions must not claim capabilities absent from the selected repositories.
+4. The page remains usable as plain static HTML/CSS/JavaScript.
