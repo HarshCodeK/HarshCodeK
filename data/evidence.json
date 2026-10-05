@@ -20,7 +20,7 @@
   {
     "repo": "kay-kay",
     "domain": "small REST gateway / spend governance",
-    "tests_passed": 3,
+    "tests_passed": 5,
     "tests_failed": 0,
     "verification": "pytest -q",
     "ci": "workflow configured",
@@ -38,7 +38,7 @@
   {
     "repo": "recoup",
     "domain": "deterministic reconciliation core",
-    "tests_passed": 5,
+    "tests_passed": 6,
     "tests_failed": 0,
     "verification": "pytest -q",
     "ci": "workflow configured",
