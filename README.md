@@ -1,39 +1,37 @@
 # Harsh Kharavle
 
-**B.Tech CSE · AI/ML/Robotics · Software Engineering + AI Systems**
+**B.Tech CSE · AI/ML/Robotics · Software Engineering + Applied AI**
 
-I build practical AI-enabled software with explicit trust boundaries, deterministic controls, and evidence-backed engineering.
+I build practical backend and AI systems with deterministic controls around probabilistic components.
 
 ## Selected work
 
 | Project | What it demonstrates |
 |---|---|
-| **Recoup** | Deterministic payment reconciliation, integer-money modeling, bounded matching, policy-gated recovery |
-| **MegaProject** | Sandboxed tool-calling boundary, path containment, read/list tool allowlist, bounded agent loop |
-| **KAY-KAY** | Small REST gateway, provider fallback, API-key hashing, conservative spend reservation, telemetry |
-| **Hybrid Log Classifier** | Rules → ML → LLM classification with abstention and incident grouping |
-| **Multimodal Financial Assistant** | PDF provenance, ChromaDB retrieval, grounded refusal, image/vision path |
+| **Hybrid Log Classifier** | Rules → ML → LLM classification, ML abstention, incident grouping |
+| **Multimodal Financial Assistant** | Multimodal document handling, ChromaDB retrieval, grounded answers and refusal |
+| **KAY-KAY** | Small REST gateway, provider fallback, hashed API keys, conservative spend reservation |
+| **MegaProject** | Application-level path boundary, read/list tool allowlist, bounded agent loop |
+| **Recoup** | Deterministic reconciliation core, integer-money modeling, bounded matching, recovery policy gate |
 
 ## Engineering principles
 
-- Deterministic controls around probabilistic components.
-- AI can assist a decision without automatically owning the action.
-- Security boundaries are documented with their limitations.
-- Claims should be reproducible from code or tests.
-- Simple architecture first; complexity only when it buys a real property.
+- Keep deterministic controls around probabilistic components.
+- Let AI assist decisions without automatically owning sensitive actions.
+- State security boundaries and limitations explicitly.
+- Prefer small architectures that demonstrate a real property.
+- Keep claims reproducible from code, tests, or documented evaluation runs.
 
 ## Stack
 
-Python · FastAPI · scikit-learn · Pydantic · SQLite · ChromaDB · sentence-transformers · RAG · LLM applications · AI agents · Docker · Git
+Python · Java · FastAPI · scikit-learn · Pydantic · SQLite · ChromaDB · sentence-transformers · RAG · LLM applications · Docker · Git
 
 ## Repositories
 
-- [Hybrid Log Classifier](https://github.com/HarshCodeK/Repo-1)
-- [Multimodal Financial Assistant](https://github.com/HarshCodeK/Repo-2)
-- [KAY-KAY](https://github.com/HarshCodeK/Repo-3)
-- [MegaProject](https://github.com/HarshCodeK/Repo-4)
-- [Recoup](https://github.com/HarshCodeK/Repo-5)
-
- > The public targets are currently staged under Repo-1 … Repo-5. The legacy implementations remain separately archived as concept/reference repositories.
+- [Hybrid Log Classifier](https://github.com/HarshCodeK/hybrid-log-classifier)
+- [Multimodal Financial Assistant](https://github.com/HarshCodeK/multimodal-financial-assistant)
+- [KAY-KAY](https://github.com/HarshCodeK/kay-kay)
+- [MegaProject](https://github.com/HarshCodeK/megaproject)
+- [Recoup](https://github.com/HarshCodeK/recoup)
 
 [Portfolio](https://github.com/HarshCodeK/HarshCodeK) · [LinkedIn](https://www.linkedin.com/in/harsh-k-422932284/)
