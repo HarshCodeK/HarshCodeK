@@ -10,7 +10,7 @@
 - Hybrid Log Classifier PR #4 (reliability, throttling, and load-test tooling) and PR #5 (bounded evidence-first triage) are both merged into `main`. The triage workflow is advisory-only; no remediation commands execute.
 - PR #5 CI passed after raw request-body bounds, timestamp validation, positive-duration serialization, and regression-test fixes: Python tests, compile check, diff check, Docker build, and container smoke run. This verifies the code branch, not a production deployment.
 - `Repo-6` README alignment has been merged. Its site HTML and deployment remain untouched pending checks of canonical-site routing, external links, unique assets, and history before any retirement decision. No repositories or history were deleted.
-- Evidence counts in `data/evidence.json` are historical snapshots and were not refreshed after PR #4/#5 merged; rerun tests at recorded commits before publishing updated counts.
+- Evidence counts in `data/evidence.json` are historical snapshots and were not refreshed after the reliability PRs for Hybrid Log Classifier, Financial Assistant, KAY-KAY, and MegaProject or the Hybrid Log Classifier triage PR merged. Rerun tests at recorded commits before publishing updated counts.
 
 ## 1. What this is
 
