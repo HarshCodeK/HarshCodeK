@@ -10,7 +10,7 @@ This is a static portfolio site with a small evidence manifest, three selected p
 2. Open a selected repository.
 3. Read its README and tests.
 4. Use the documented commands to reproduce its local checks.
-5. For the proposed Hybrid Log Classifier triage workflow, inspect [PR #5](https://github.com/HarshCodeK/hybrid-log-classifier/pull/5); it is not yet part of the default branch.
+5. For the merged Hybrid Log Classifier triage workflow, inspect [PR #5](https://github.com/HarshCodeK/hybrid-log-classifier/pull/5); it is advisory-only and does not execute remediation.
 
 ## If an interviewer asks
 
