@@ -6,11 +6,11 @@
 ## Current state — 2026-10-19
 
 - The featured portfolio shortlist is now three projects: Hybrid Log Classifier, KAY-KAY, and Recoup.
-- The printable resume and profile README are being aligned to that same shortlist.
-- Hybrid Log Classifier PR #5 adds a bounded evidence-first triage workflow; it is based on the open `reliability-final` branch and is not merged into `main`.
-- On the latest PR #5 head, the Python test job, compile check, diff check, Docker image build, and container smoke run all passed. This verifies the branch CI, not a production deployment.
+- The profile README, homepage, evidence manifest, and printable resume now use that same shortlist.
+- Hybrid Log Classifier PR #4 (reliability, throttling, and load-test tooling) is merged into `main`. PR #5 adds bounded evidence-first triage and is open against `main`; it is not merged.
+- The latest PR #5 head is awaiting a fresh CI result after fixes for raw request-body bounds and triage edge cases. CI results verify a code branch, not a production deployment.
 - `Repo-6` README alignment has been merged. Its site HTML and deployment remain untouched pending checks of canonical-site routing, external links, unique assets, and history before any retirement decision. No repositories or history were deleted.
-- Evidence counts in `data/evidence.json` are baseline main-branch snapshots; proposed PR changes are not included until merged and re-verified.
+- Evidence counts in `data/evidence.json` are historical snapshots, not refreshed after PR #4 merged; rerun tests at recorded commits before publishing updated counts.
 
 ## 1. What this is
 
@@ -39,7 +39,7 @@ Pages, no framework, no build dependency.
 
 ## 4. Historical next action (superseded)
 
-The earlier session planned to align `/resume.html` and print to PDF. The current proposed portfolio PR aligns the resume with the three-project shortlist. Deployment and print-to-PDF rendering remain unverified.
+The earlier session planned to align `/resume.html` and print to PDF. The portfolio refresh has merged and aligns the resume with the three-project shortlist. Deployment and print-to-PDF rendering remain unverified.
 
 ## 5. Historical open question (resolved in the current proposal)
 
