@@ -18,13 +18,12 @@ The portfolio site: a landing page, an evidence wall built from each repository'
 measured numbers, and a printable resume at /resume.html. Static files on GitHub
 Pages, no framework, no build dependency.
 
-## 2. State of the world
+## 2. Historical state (2026-10-03; superseded by the current-state entry above)
 
 - Tests: 8 passing (`npm test`)
 - Repositories listed: 5 — hybrid-log-classifier, multimodal-financial-assistant,
   megaproject, kay-kay, recoup
-- Every figure in `data/evidence.json` carries the command that reproduces it,
-  measured 2026-10-03
+- The old manifest described the then-current counts as measured on 2026-10-03. Commit SHAs were not captured; treat these as historical snapshots, not current verification.
 
 ## 3. Landmines
 
@@ -38,14 +37,13 @@ Pages, no framework, no build dependency.
   tests with a description of an architecture it no longer had. Both corrected
   against measured runs.
 
-## 4. Next action
+## 4. Historical next action (superseded)
 
-Keep /resume.html aligned with the repository evidence and print to PDF before applications. The portfolio CI gate is test-only unless a checked-in smoke script is added.
+The earlier session planned to align `/resume.html` and print to PDF. The current proposed portfolio PR aligns the resume with the three-project shortlist. Deployment and print-to-PDF rendering remain unverified.
 
-## 5. Open questions
+## 5. Historical open question (resolved in the current proposal)
 
-- The site lists recoup (162 tests, F1 0.805) but it is not on the PDF resume
-  used for applications. Decide whether to add it there.
+- Recoup is now included in the proposed printable resume and three-project shortlist. The actual exported PDF and deployment still need manual verification.
 
 ## 6. Session entries (newest first)
 
