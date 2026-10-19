@@ -20,7 +20,7 @@ rerun tests before publishing fresh counts.
 
 | Checkpoint | Work | Completion evidence |
 |---|---|---|
-| P1 | Finish review of Hybrid Log Classifier reliability PR #4 and triage PR #5 in dependency order | CI passes on each final head; merge PR #4 before PR #5 |
+| P1 | Keep the merged Hybrid Log Classifier reliability and triage workflows correct | CI remains green; keep evidence and documentation aligned with merged behavior |
 | P2 | Finish portfolio factual-claim review | README, homepage, resume, evidence manifest, and handoff docs agree; no stale current-state plan |
 | P3 | Render and inspect the printable resume | Verify page count and clipping from an actual exported PDF; do not claim deployment until checked |
 | P4 | Audit Repo-6 retirement candidates | Check Pages/deployment configuration, inbound links, unique assets, and history before any site/repository retirement |

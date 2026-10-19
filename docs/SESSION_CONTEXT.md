@@ -6,11 +6,11 @@
 ## Current state — 2026-10-19
 
 - The featured portfolio shortlist is now three projects: Hybrid Log Classifier, KAY-KAY, and Recoup.
-- The printable resume and profile README are being aligned to that same shortlist.
-- Hybrid Log Classifier PR #5 adds a bounded evidence-first triage workflow; it is based on the open `reliability-final` branch and is not merged into `main`.
-- On the latest PR #5 head, the Python test job, compile check, diff check, Docker image build, and container smoke run all passed. This verifies the branch CI, not a production deployment.
+- The profile README, homepage, evidence manifest, and printable resume now use that same shortlist.
+- Hybrid Log Classifier PR #4 (reliability, throttling, and load-test tooling) and PR #5 (bounded evidence-first triage) are both merged into `main`. The triage workflow is advisory-only; no remediation commands execute.
+- PR #5 CI passed after raw request-body bounds, timestamp validation, positive-duration serialization, and regression-test fixes: Python tests, compile check, diff check, Docker build, and container smoke run. This verifies the code branch, not a production deployment.
 - `Repo-6` README alignment has been merged. Its site HTML and deployment remain untouched pending checks of canonical-site routing, external links, unique assets, and history before any retirement decision. No repositories or history were deleted.
-- Evidence counts in `data/evidence.json` are baseline main-branch snapshots; proposed PR changes are not included until merged and re-verified.
+- Evidence counts in `data/evidence.json` are historical snapshots and were not refreshed after PR #4/#5 merged; rerun tests at recorded commits before publishing updated counts.
 
 ## 1. What this is
 
@@ -39,11 +39,11 @@ Pages, no framework, no build dependency.
 
 ## 4. Historical next action (superseded)
 
-The earlier session planned to align `/resume.html` and print to PDF. The current proposed portfolio PR aligns the resume with the three-project shortlist. Deployment and print-to-PDF rendering remain unverified.
+The earlier session planned to align `/resume.html` and print to PDF. The portfolio refresh has merged and aligns the resume with the three-project shortlist. Exported-PDF rendering and deployment remain unverified. Deployment and print-to-PDF rendering remain unverified.
 
 ## 5. Historical open question (resolved in the current proposal)
 
-- Recoup is now included in the proposed printable resume and three-project shortlist. The actual exported PDF and deployment still need manual verification.
+- Recoup is included in the printable resume and three-project shortlist. The actual exported PDF and deployment still need manual verification.
 
 ## 6. Session entries (newest first)
 

@@ -40,12 +40,12 @@
 
 <section id="work">
 <h2>Selected work</h2>
-<p class="sub">Three focused projects. Descriptions distinguish current default-branch behavior from proposed changes that are still under review.</p>
+<p class="sub">Three focused projects. Descriptions distinguish merged behavior from deployment status; no production deployment is claimed.</p>
 <div class="grid">
 <article class="panel featured reveal">
 <div class="content">
 <h3><a href="https://github.com/HarshCodeK/hybrid-log-classifier">hybrid-log-classifier</a></h3>
-<p>Confidence-aware log classification: deterministic rules first, local ML when confident, optional LLM only after abstention, and related-event grouping. Reliability/load-test tooling is proposed in PR #4; the bounded triage extension in PR #5 builds on that branch. Neither change is merged into the default branch yet.</p>
+<p>Confidence-aware log classification: deterministic rules first, local ML when confident, optional LLM only after abstention, and related-event grouping. Reliability controls and reproducible client-side load testing merged in PR #4. The bounded load-report/log triage workflow merged in PR #5; recommendations are advisory-only and no commands are executed.</p>
 <div class="tech"><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>SQLite</span><span>incident grouping</span></div>
 <a class="link" href="https://github.com/HarshCodeK/hybrid-log-classifier">View repository →</a>
 <br><a class="link" href="https://github.com/HarshCodeK/hybrid-log-classifier/pull/5">Review proposed triage workflow →</a>
@@ -81,7 +81,7 @@
 
 <section id="evidence">
 <h2>Evidence</h2>
-<p class="sub">The manifest records baseline default-branch test counts for the three featured projects. The proposed triage PR is not counted until it is merged and re-verified.</p>
+<p class="sub">The manifest records baseline default-branch test counts for the three featured projects. The triage workflow is merged; test counts in the manifest remain historical and were not refreshed by this portfolio change.</p>
 <div id="evidence-wall" class="grid"></div>
 </section>
 
