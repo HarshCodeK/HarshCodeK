@@ -8,6 +8,6 @@ The portfolio uses the checked-in manifest at `data/evidence.json`. It records h
 | kay-kay | 5 | `pytest -q` |
 | recoup | 6 | `pytest -q` |
 
-These counts are historical snapshots, not live counters or fresh verification. `make validate-evidence` validates manifest shape only; it does not execute tests in sibling repositories or regenerate the counts. These are not production benchmarks. Re-run the listed commands at a recorded commit before using counts as current evidence. The incident-triage extension is proposed in [Hybrid Log Classifier PR #5](https://github.com/HarshCodeK/hybrid-log-classifier/pull/5); its tests are not included in the baseline count until that change is merged and re-verified.
+These counts are historical snapshots, not live counters or fresh verification. `make validate-evidence` validates manifest shape only; it does not execute tests in sibling repositories or regenerate the counts. These are not production benchmarks. Re-run the listed commands at a recorded commit before using counts as current evidence. The incident-triage extension is merged via [Hybrid Log Classifier PR #5](https://github.com/HarshCodeK/hybrid-log-classifier/pull/5). Its tests are not reflected in the historical baseline count above; rerun tests at a recorded commit before publishing an updated count.
 
 CI and Docker status are reported only where a prior workflow run supports the claim. A configured workflow is not the same as a successful run.
