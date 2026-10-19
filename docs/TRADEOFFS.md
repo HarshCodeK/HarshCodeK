@@ -14,4 +14,4 @@
 - No claim that an application-level path boundary is OS isolation.
 - No claim that a deterministic reconciliation core is a payment-execution system.
 - No claim that KAY-KAY's provider stubs are live provider integrations.
-- No claim that the proposed incident-triage workflow is merged or deployed.
+- The incident-triage workflow is merged; no claim that it is deployed or production-ready.
