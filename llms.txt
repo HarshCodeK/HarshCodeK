@@ -2,7 +2,7 @@
 
 This portfolio features three projects and avoids unverified production claims.
 
-- Hybrid Log Classifier: confidence-aware rules → local ML → optional LLM classification, explicit abstention, incident grouping, reliability controls, and reproducible client-side load testing (PR #4 merged). The load-report/log triage extension is proposed in PR #5 and is not merged into the default branch.
+- Hybrid Log Classifier: confidence-aware rules → local ML → optional LLM classification, explicit abstention, incident grouping, reliability controls, and reproducible client-side load testing (PR #4 merged). The bounded load-report/log triage workflow merged via PR #5; it provides advisory checks and executes no remediation commands.
 - KAY-KAY: LLM gateway prototype with hashed API keys, spend reservation, and telemetry. Provider integrations are deterministic stubs; accounting and rate limits are process-local.
 - Recoup: deterministic payment reconciliation using integer paise, bounded timestamp matching, one-to-one matching, and a separate recovery-policy gate. No money-execution API or LLM dependency.
 
