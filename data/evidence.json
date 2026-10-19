@@ -4,7 +4,7 @@
     "domain": "confidence-aware log classification and incident grouping",
     "tests_passed": 16,
     "tests_failed": 0,
-    "verification": "pytest -q · main-branch snapshot",
+    "verification": "pytest -q · historical snapshot; commit SHA not recorded; not re-run in this PR",
     "ci": "prior CI verified; reliability and triage changes are in open PRs",
     "docker": "prior CI verified"
   },
