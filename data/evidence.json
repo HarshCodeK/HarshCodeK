@@ -13,7 +13,7 @@
     "domain": "LLM gateway prototype and spend governance",
     "tests_passed": 5,
     "tests_failed": 0,
-    "verification": "pytest -q · main-branch snapshot",
+    "verification": "pytest -q · historical snapshot; commit SHA not recorded; not re-run in this PR",
     "ci": "workflow configured; reliability changes are in an open PR",
     "docker": "not claimed"
   },
@@ -22,7 +22,7 @@
     "domain": "deterministic payment reconciliation and recovery policy",
     "tests_passed": 6,
     "tests_failed": 0,
-    "verification": "pytest -q · main-branch snapshot",
+    "verification": "pytest -q · historical snapshot; commit SHA not recorded; not re-run in this PR",
     "ci": "workflow configured",
     "docker": "not claimed"
   }
