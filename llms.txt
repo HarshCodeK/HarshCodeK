@@ -1,9 +1,9 @@
-# Harsh Kharavle - portfolio evidence
+# Harsh Kharavle — portfolio summary
 
-Every line below is generated from a repository's own EVIDENCE.json.
+This portfolio features three projects and avoids unverified production claims.
 
-- hybrid-log-classifier (A tier, three-tier log classification / incident grouping): 27 tests passing; source: hybrid-log-classifier\EVIDENCE.json
-- kay-kay (A tier, OpenAI-compatible LLM gateway / spend governance): 29 tests passing; source: kay-kay\EVIDENCE.json
-- megaproject (S tier, sandboxed tool-calling agent / offline degradation): 38 tests passing; source: megaproject\EVIDENCE.json
-- multimodal-financial-assistant (A tier, multimodal extraction / grounded RAG): 14 tests passing; source: multimodal-financial-assistant\EVIDENCE.json
-- recoup (S tier, multi-source payment reconciliation control plane): 162 tests passing; source: recoup\EVIDENCE.json
+- Hybrid Log Classifier: confidence-aware rules → local ML → optional LLM classification, explicit abstention, incident grouping, and reproducible load testing. The load-report/log triage extension is proposed in PR #5 and is not merged into the default branch.
+- KAY-KAY: LLM gateway prototype with hashed API keys, spend reservation, and telemetry. Provider integrations are deterministic stubs; accounting and rate limits are process-local.
+- Recoup: deterministic payment reconciliation using integer paise, bounded timestamp matching, one-to-one matching, and a separate recovery-policy gate. No money-execution API or LLM dependency.
+
+Baseline test counts are recorded in data/evidence.json. They describe the listed default-branch snapshots, not production reliability or live usage.
