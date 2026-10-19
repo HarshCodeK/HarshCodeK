@@ -6,7 +6,7 @@
 |---|---|
 | Evidence | Test counts are default-branch snapshots and should be rerun after repository changes. |
 | Project scope | The portfolio features three portfolio-scale projects, not production services. |
-| Incident triage | The Hybrid Log Classifier triage extension is in an open PR; it is not merged or deployed. Suggestions do not establish root cause. |
+| Incident triage | The Hybrid Log Classifier triage extension is merged but not claimed as deployed. Suggestions do not establish root cause or authorize remediation. |
 | Security | MegaProject demonstrates an application-level path boundary, not OS/container isolation; it is not one of the three featured projects. |
 | AI reliability | Probabilistic components are bounded, but they are not guaranteed to be correct. |
 | Evaluation | Hybrid Log Classifier uses a small synthetic dataset; its metrics are not production benchmarks. |

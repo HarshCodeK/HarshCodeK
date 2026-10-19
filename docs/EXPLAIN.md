@@ -2,7 +2,7 @@
 
 ## In one paragraph
 
-This is a static portfolio site with a small evidence manifest, three selected project summaries, engineering principles, and a printable resume. The descriptions distinguish current default-branch behavior from proposed changes still under review.
+This is a static portfolio site with a small evidence manifest, three selected project summaries, engineering principles, and a printable resume. The descriptions distinguish merged implementation from deployment status, limitations, and evidence provenance.
 
 ## The useful demo
 
