@@ -1,46 +1,28 @@
 [
   {
     "repo": "hybrid-log-classifier",
-    "domain": "three-tier log classification / incident grouping",
+    "domain": "confidence-aware log classification and incident grouping",
     "tests_passed": 16,
     "tests_failed": 0,
-    "verification": "pytest -q",
-    "ci": "verified in prior CI",
-    "docker": "verified in prior CI"
-  },
-  {
-    "repo": "multimodal-financial-assistant",
-    "domain": "multimodal extraction / grounded retrieval",
-    "tests_passed": 6,
-    "tests_failed": 0,
-    "verification": "pytest -q",
-    "ci": "verified in prior CI",
-    "docker": "verified in prior CI"
+    "verification": "pytest -q · main-branch snapshot",
+    "ci": "prior CI verified; reliability and triage changes are in open PRs",
+    "docker": "prior CI verified"
   },
   {
     "repo": "kay-kay",
-    "domain": "small REST gateway / spend governance",
+    "domain": "LLM gateway prototype and spend governance",
     "tests_passed": 5,
     "tests_failed": 0,
-    "verification": "pytest -q",
-    "ci": "workflow configured",
-    "docker": "not claimed"
-  },
-  {
-    "repo": "megaproject",
-    "domain": "application-level tool-calling boundary",
-    "tests_passed": 3,
-    "tests_failed": 0,
-    "verification": "pytest -q",
-    "ci": "workflow configured",
+    "verification": "pytest -q · main-branch snapshot",
+    "ci": "workflow configured; reliability changes are in an open PR",
     "docker": "not claimed"
   },
   {
     "repo": "recoup",
-    "domain": "deterministic reconciliation core",
+    "domain": "deterministic payment reconciliation and recovery policy",
     "tests_passed": 6,
     "tests_failed": 0,
-    "verification": "pytest -q",
+    "verification": "pytest -q · main-branch snapshot",
     "ci": "workflow configured",
     "docker": "not claimed"
   }
