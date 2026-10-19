@@ -5,7 +5,7 @@
     "tests_passed": 16,
     "tests_failed": 0,
     "verification": "pytest -q · historical snapshot; commit SHA not recorded; not re-run in this PR",
-    "ci": "PR #4 reliability CI passed; triage extension remains open in PR #5",
+    "ci": "PR #4 and PR #5 CI passed; triage workflow merged; production deployment not claimed",
     "docker": "prior CI verified"
   },
   {
