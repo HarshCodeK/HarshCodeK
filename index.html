@@ -27,56 +27,53 @@
 <span class="chip ok">open to software engineering / AI engineering roles</span>
 <h1>Backend and AI systems with <span class="accent">deterministic controls.</span></h1>
 <p class="lead">I build small, explainable systems where probabilistic components are bounded by explicit rules, tests, and failure paths.</p>
-<p class="for">B.Tech CSE student focused on Python, backend engineering and applied AI. Five selected repositories demonstrate classification, retrieval, gateways, tool boundaries, and reconciliation.</p>
+<p class="for">B.Tech CSE student focused on Python, backend engineering and applied AI. Three selected projects demonstrate reliability engineering, LLM gateway controls, and deterministic financial logic.</p>
 <div class="cta">
 <a class="btn primary" href="resume.html">Resume <span class="arrow">→</span></a>
 <a class="btn" href="https://github.com/HarshCodeK">github.com/HarshCodeK</a>
 </div>
 <div class="hero-stats" style="margin-top:48px">
-<div class="stat-group"><span class="stat-num">5</span><span class="stat-label">selected repositories</span></div>
-<div class="stat-group"><span class="stat-num">36</span><span class="stat-label">tests</span></div>
+<div class="stat-group"><span class="stat-num">3</span><span class="stat-label">featured projects</span></div>
 <div class="stat-group"><span class="stat-num">0</span><span class="stat-label">production-grade claims</span></div>
 </div>
 </section>
 
 <section id="work">
 <h2>Selected work</h2>
-<p class="sub">Five focused projects. The descriptions below match the current implementations rather than the original project concepts.</p>
+<p class="sub">Three focused projects. Descriptions distinguish current default-branch behavior from proposed changes that are still under review.</p>
 <div class="grid">
 <article class="panel featured reveal">
 <div class="content">
 <h3><a href="https://github.com/HarshCodeK/hybrid-log-classifier">hybrid-log-classifier</a></h3>
-<p>Three-tier log classification: regex → ML → optional LLM. The ML tier can abstain instead of forcing a prediction, and related lines are grouped into incidents over a bounded time window.</p>
-<div class="tech"><span>Python</span><span>scikit-learn</span><span>FastAPI</span><span>16 tests</span></div>
+<p>Confidence-aware incident intelligence: deterministic rules first, local ML when confident, optional LLM only after abstention. Related events are grouped using a bounded time window. The proposed triage extension adds evidence-linked checks across load-test reports and timestamped logs; it is in review, not yet merged.</p>
+<div class="tech"><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>SQLite</span><span>CI + load-test harness</span></div>
 <a class="link" href="https://github.com/HarshCodeK/hybrid-log-classifier">View repository →</a>
+<br><a class="link" href="https://github.com/HarshCodeK/hybrid-log-classifier/pull/5">Review proposed triage workflow →</a>
+</div>
+<div class="visual">
+<div class="code-block">
+<span class="cm"># bounded diagnostic workflow</span><br>
+<span class="fn">inspect_load_report</span>()<br>
+<span class="fn">classify_log_events</span>()<br>
+<span class="fn">group_incidents</span>()<br>
+<span class="fn">correlate_log_window</span>()<br>
+<span class="kw">return</span> <span class="str">evidence_linked_checks</span><br>
+<span class="cm"># no shell commands or auto-remediation</span>
+</div>
 </div>
 </article>
 
 <article class="panel reveal reveal-delay-1">
-<h3><a href="https://github.com/HarshCodeK/multimodal-financial-assistant">multimodal-financial-assistant</a></h3>
-<p>Processes image and text-based financial documents, retrieves policy context from ChromaDB, and keeps answers grounded in retrieved material.</p>
-<div class="tech"><span>Python</span><span>ChromaDB</span><span>FastAPI</span><span>6 tests</span></div>
-<a class="link" href="https://github.com/HarshCodeK/multimodal-financial-assistant">View repository →</a>
-</article>
-
-<article class="panel reveal">
 <h3><a href="https://github.com/HarshCodeK/kay-kay">kay-kay</a></h3>
-<p>A small REST gateway with provider fallback, SHA-256 API-key hashing, conservative pre-request spend reservation and request telemetry.</p>
-<div class="tech"><span>Python</span><span>FastAPI</span><span>5 tests</span></div>
+<p>A small LLM gateway prototype with hashed API keys, conservative pre-request spend reservation, and request telemetry. Provider integrations are deterministic stubs; budget accounting and request limits are process-local, so this is not a production gateway.</p>
+<div class="tech"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>REST gateway</span></div>
 <a class="link" href="https://github.com/HarshCodeK/kay-kay">View repository →</a>
-</article>
-
-<article class="panel reveal reveal-delay-1">
-<h3><a href="https://github.com/HarshCodeK/megaproject">megaproject</a></h3>
-<p>An application-level tool boundary: paths are resolved before containment checks and only read/list tools are exposed. It does not claim OS-level isolation.</p>
-<div class="tech"><span>Python</span><span>FastAPI</span><span>3 tests</span></div>
-<a class="link" href="https://github.com/HarshCodeK/megaproject">View repository →</a>
 </article>
 
 <article class="panel reveal">
 <h3><a href="https://github.com/HarshCodeK/recoup">recoup</a></h3>
-<p>A deterministic reconciliation core using integer paise, bounded timestamp matching, one-to-one matching and a separate recovery policy gate.</p>
-<div class="tech"><span>Python</span><span>6 tests</span><span>integer paise</span></div>
+<p>A deterministic payment-reconciliation core using integer paise, bounded timestamp matching, one-to-one transaction matching, and a separate recovery-policy gate. It has no money-execution API and no LLM dependency.</p>
+<div class="tech"><span>Python</span><span>Integer money</span><span>Policy gate</span></div>
 <a class="link" href="https://github.com/HarshCodeK/recoup">View repository →</a>
 </article>
 </div>
@@ -84,7 +81,7 @@
 
 <section id="evidence">
 <h2>Evidence</h2>
-<p class="sub">Current repository test counts are recorded in <code>data/evidence.json</code>. CI and Docker claims are only shown where they were previously verified.</p>
+<p class="sub">The manifest records baseline default-branch test counts for the three featured projects. The proposed triage PR is not counted until it is merged and re-verified.</p>
 <div id="evidence-wall" class="grid"></div>
 </section>
 
