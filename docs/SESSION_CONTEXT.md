@@ -8,7 +8,7 @@
 - The featured portfolio shortlist is now three projects: Hybrid Log Classifier, KAY-KAY, and Recoup.
 - The printable resume and profile README are being aligned to that same shortlist.
 - Hybrid Log Classifier PR #5 adds a bounded evidence-first triage workflow; it is based on the open `reliability-final` branch and is not merged into `main`.
-- The triage workflow's test and Docker CI jobs passed on PR #5's current head. This verifies the branch's CI suite, not a production deployment.
+- An earlier PR #5 head passed the test and Docker CI jobs. The latest head adds explicit report-size and request-rate bounds plus an out-of-window correlation regression test; those latest changes are being re-verified.
 - `Repo-6` is a second portfolio-site candidate and remains untouched pending a decision about canonical site, external links, and unique assets. No repositories or history were deleted.
 - Evidence counts in `data/evidence.json` are baseline main-branch snapshots; proposed PR changes are not included until merged and re-verified.
 
