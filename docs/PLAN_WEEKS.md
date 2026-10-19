@@ -11,15 +11,24 @@ The previous plan targeted case studies for `regent`, `holdfast` and
 They are not restated here, because leaving them on the page would make the site
 a record of work that was abandoned.
 
-## Current
+## Current portfolio plan
 
-| Week | Feature | Number to publish |
+The featured shortlist is intentionally three projects: Hybrid Log Classifier,
+KAY-KAY, and Recoup. Do not restore a five-repository showcase merely to match
+the older plan. The manifest is a historical snapshot; record commit SHAs and
+rerun tests before publishing fresh counts.
+
+| Checkpoint | Work | Completion evidence |
 |---|---|---|
-| W1 | Remove the six dead repository panels; correct KAY-KAY (5 -> 29) and MegaProject (0 -> 38); add the two missing projects | 5 live repositories, 8 tests passing |
-| W2 | Add `tests/links.test.js`: dead-link, markup-balance, uncited-row, retired-model and empty-filter guards | 7 checks, verified failing on a reintroduced dead link |
-| W3 | Print `/resume.html` to PDF and confirm it fits one page | 1 page |
-| W4 | Case studies for the four live repositories, one per week | each cites its own pytest run |
+| P1 | Finish review of Hybrid Log Classifier reliability PR #4 and triage PR #5 in dependency order | CI passes on each final head; merge PR #4 before PR #5 |
+| P2 | Finish portfolio factual-claim review | README, homepage, resume, evidence manifest, and handoff docs agree; no stale current-state plan |
+| P3 | Render and inspect the printable resume | Verify page count and clipping from an actual exported PDF; do not claim deployment until checked |
+| P4 | Audit Repo-6 retirement candidates | Check Pages/deployment configuration, inbound links, unique assets, and history before any site/repository retirement |
+| P5 | Refresh evidence at pinned commits | Record repository commit SHAs and exact commands; distinguish test counts from performance benchmarks |
 
+make gate validates portfolio tests and manifest shape only. It does not run
+sibling-repository tests, regenerate evidence, export the resume, or deploy the
+site.
 ## Rules that survived
 
 1. No number without the command that reproduces it.

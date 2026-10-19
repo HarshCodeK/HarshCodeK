@@ -1,4 +1,4 @@
-.PHONY: install gate test evidence dashboard run clean
+.PHONY: install test gate validate-evidence dashboard run serve clean
 
 install:
 	npm install --no-audit --no-fund
@@ -6,17 +6,15 @@ install:
 test:
 	npm test
 
-gate: test
-	node scripts/smoke.js
+validate-evidence:
+	node -e 'const rows = JSON.parse(require("node:fs").readFileSync("data/evidence.json", "utf8")); if (!Array.isArray(rows) || rows.length !== 3) throw new Error("expected three featured project rows"); for (const row of rows) { if (!row.repo || !Number.isInteger(row.tests_passed) || row.tests_passed < 0 || row.tests_failed !== 0) throw new Error("invalid evidence row: " + JSON.stringify(row)); } console.log("Validated " + rows.length + " featured project evidence rows.");'
 
-evidence:
-	node scripts/evidence.js
+gate: test validate-evidence
 
-dashboard:
-	node scripts/serve.js
+serve:
+	python3 -m http.server 8000
 
-run:
-	node scripts/serve.js
+dashboard run: serve
 
 clean:
-	rm -rf node_modules coverage
+	rm -rf node_modules

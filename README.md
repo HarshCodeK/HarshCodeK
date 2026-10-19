@@ -1,37 +1,33 @@
 # Harsh Kharavle
 
-**B.Tech CSE · AI/ML/Robotics · Software Engineering + Applied AI**
+**B.Tech CSE · Software Engineering · Applied AI Systems**
 
-I build practical backend and AI systems with deterministic controls around probabilistic components.
+I build practical backend and AI software with explicit trust boundaries, reproducible tests, and honest failure modes. My portfolio is intentionally focused on three projects rather than a long list of shallow demos.
 
 ## Selected work
 
-| Project | What it demonstrates |
+| Project | Engineering focus |
 |---|---|
-| **Hybrid Log Classifier** | Rules → ML → LLM classification, ML abstention, incident grouping |
-| **Multimodal Financial Assistant** | Multimodal document handling, ChromaDB retrieval, grounded answers and refusal |
-| **KAY-KAY** | Small REST gateway, provider fallback, hashed API keys, conservative spend reservation |
-| **MegaProject** | Application-level path boundary, read/list tool allowlist, bounded agent loop |
-| **Recoup** | Deterministic reconciliation core, integer-money modeling, bounded matching, recovery policy gate |
+| [**Hybrid Log Classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) | Rules → local ML → optional LLM, explicit abstention, and incident grouping. Reliability and reproducible load-test tooling are proposed in [PR #4](https://github.com/HarshCodeK/hybrid-log-classifier/pull/4); a bounded load-report/log triage extension is proposed in [PR #5](https://github.com/HarshCodeK/hybrid-log-classifier/pull/5). Neither PR is merged into the default branch yet. |
+| [**KAY-KAY**](https://github.com/HarshCodeK/kay-kay) | LLM gateway prototype: hashed API keys, provider-fallback structure, pre-request spend reservation, and request telemetry. Provider integrations are deterministic stubs; accounting and rate limits are process-local, so this is not a production gateway. |
+| [**Recoup**](https://github.com/HarshCodeK/recoup) | Deterministic payment reconciliation using integer paise, bounded timestamp matching, one-to-one transaction matching, and a separate recovery-policy gate. It has no money-execution API and no LLM dependency. |
 
 ## Engineering principles
 
-- Keep deterministic controls around probabilistic components.
-- Let AI assist decisions without automatically owning sensitive actions.
-- State security boundaries and limitations explicitly.
-- Prefer small architectures that demonstrate a real property.
-- Keep claims reproducible from code, tests, or documented evaluation runs.
+- Deterministic validation and policy gates around probabilistic components.
+- AI may assist diagnosis, but sensitive actions remain under explicit control.
+- Application-level path checks are not OS isolation; prototypes are not production infrastructure.
+- Performance and quality claims must be reproducible from source, tests, or a documented run.
+- Prefer a small architecture with a demonstrated property over a large framework stack.
 
 ## Stack
 
-Python · Java · FastAPI · scikit-learn · Pydantic · SQLite · ChromaDB · sentence-transformers · RAG · LLM applications · Docker · Git
+Python · Java · FastAPI · Pydantic · scikit-learn · SQLite · REST APIs · LLM applications · Docker · Git · automated testing · CI
 
-## Repositories
+## Education
 
-- [Hybrid Log Classifier](https://github.com/HarshCodeK/hybrid-log-classifier)
-- [Multimodal Financial Assistant](https://github.com/HarshCodeK/multimodal-financial-assistant)
-- [KAY-KAY](https://github.com/HarshCodeK/kay-kay)
-- [MegaProject](https://github.com/HarshCodeK/megaproject)
-- [Recoup](https://github.com/HarshCodeK/recoup)
+B.Tech, Computer Science & Engineering — DIT University, Dehradun.
 
-[Portfolio](https://github.com/HarshCodeK/HarshCodeK) · [LinkedIn](https://www.linkedin.com/in/harsh-k-422932284/)
+## Contact
+
+[GitHub](https://github.com/HarshCodeK) · [LinkedIn](https://www.linkedin.com/in/harsh-k-422932284/)
