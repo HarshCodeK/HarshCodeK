@@ -9,7 +9,7 @@
 - The printable resume and profile README are being aligned to that same shortlist.
 - Hybrid Log Classifier PR #5 adds a bounded evidence-first triage workflow; it is based on the open `reliability-final` branch and is not merged into `main`.
 - On the latest PR #5 head, the Python test job, compile check, diff check, Docker image build, and container smoke run all passed. This verifies the branch CI, not a production deployment.
-- `Repo-6` is a second portfolio-site candidate and remains untouched pending a decision about canonical site, external links, and unique assets. No repositories or history were deleted.
+- `Repo-6` README alignment has been merged. Its site HTML and deployment remain untouched pending checks of canonical-site routing, external links, unique assets, and history before any retirement decision. No repositories or history were deleted.
 - Evidence counts in `data/evidence.json` are baseline main-branch snapshots; proposed PR changes are not included until merged and re-verified.
 
 ## 1. What this is
