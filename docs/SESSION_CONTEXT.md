@@ -8,7 +8,7 @@
 - The featured portfolio shortlist is now three projects: Hybrid Log Classifier, KAY-KAY, and Recoup.
 - The profile README, homepage, evidence manifest, and printable resume now use that same shortlist.
 - Hybrid Log Classifier PR #4 (reliability, throttling, and load-test tooling) is merged into `main`. PR #5 adds bounded evidence-first triage and is open against `main`; it is not merged.
-- The latest PR #5 head is awaiting a fresh CI result after fixes for raw request-body bounds and triage edge cases. CI results verify a code branch, not a production deployment.
+- After the raw request-body bound, timestamp validation, positive-duration serialization, and regression-test fixes, the latest PR #5 CI passed: Python tests, compile check, diff check, Docker build, and container smoke run. This verifies the branch, not a production deployment.
 - `Repo-6` README alignment has been merged. Its site HTML and deployment remain untouched pending checks of canonical-site routing, external links, unique assets, and history before any retirement decision. No repositories or history were deleted.
 - Evidence counts in `data/evidence.json` are historical snapshots, not refreshed after PR #4 merged; rerun tests at recorded commits before publishing updated counts.
 
