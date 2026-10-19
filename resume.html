@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Harsh Paresh Kharavle - resume</title>
+<title>Harsh Kharavle — Resume</title>
 <link rel="stylesheet" href="assets/house.css">
 <style>
 body{background:var(--ink)}
@@ -26,51 +26,44 @@ a{color:#000;text-decoration:none}
 </head>
 <body>
 <div class="sheet">
-<h1>Harsh Paresh Kharavle</h1>
-<div class="contact">AI Systems Engineer - Python / Java / Backend / Applied AI<br>
-harsh.kharavle@gmail.com - github.com/HarshCodeK - linkedin.com/in/harsh-k-422932284</div>
+<h1>Harsh Kharavle</h1>
+<div class="contact">Software Developer | Applied AI Systems — Python / Backend / AI<br>
+harsh.kharavle@gmail.com · github.com/HarshCodeK · linkedin.com/in/harsh-k-422932284</div>
 
-<h2>Selected engineering evidence</h2>
+<h2>Selected engineering work</h2>
 <ul>
-<li><b>36 tests across five selected systems.</b> Current repository test counts are 16, 6, 5, 3 and 6 respectively.</li>
-<li><b>Selective log classification.</b> The classifier uses a rule → ML → LLM pipeline; the ML tier can abstain instead of forcing a prediction. Evaluation separates accepted-case quality from coverage.</li>
-<li><b>Policy-grounded financial assistant.</b> Documents are processed through extraction and retrieval, with explicit refusal when the available policy context does not support an answer.</li>
-<li><b>Conservative LLM gateway controls.</b> KAY-KAY demonstrates provider fallback and pre-request spend reservation; the current accounting state is intentionally in memory.</li>
+<li><b>Confidence-aware log classification.</b> Built a rule → local ML → optional LLM pipeline with explicit abstention, bounded API behavior, incident grouping, and reproducible evaluation. A load-test/log triage extension is in an open PR and is not yet part of the default branch.</li>
+<li><b>LLM gateway prototype.</b> Implemented API-key hashing, pre-request spend reservation, provider-fallback structure, and request telemetry. Provider integrations are deterministic stubs; accounting and request limits are process-local.</li>
+<li><b>Deterministic reconciliation.</b> Modeled money as integer paise, used bounded timestamp matching and one-to-one transaction matching, and separated recovery authorization into a deterministic policy gate. No money-execution API or LLM dependency.</li>
 </ul>
 
 <h2>Projects</h2>
 <ul>
-<li><span class="role">hybrid-log-classifier</span> <span class="meta">Python, scikit-learn, FastAPI, Java</span><br>
-Three-tier log classification — regex, then ML, then optional LLM — with ML abstention and incident grouping over a time window. <b>16 tests.</b></li>
+<li><span class="role">Hybrid Log Classifier</span> <span class="meta">Python, scikit-learn, FastAPI, SQLite</span><br>
+Classifies logs with deterministic rules, a local statistical model, and optional LLM escalation only after ML abstention. Includes incident grouping, API metrics, grouped evaluation, and a reproducible client-side load-test harness. <a href="https://github.com/HarshCodeK/hybrid-log-classifier">Repository</a>.</li>
 
-<li><span class="role">multimodal-financial-assistant</span> <span class="meta">Python, ChromaDB, sentence-transformers, FastAPI, Streamlit</span><br>
-Processes image and text-based financial documents, retrieves policy context from ChromaDB, and keeps answers grounded in retrieved material. <b>6 tests.</b></li>
+<li><span class="role">KAY-KAY</span> <span class="meta">Python, FastAPI, SQLite</span><br>
+LLM gateway prototype with hashed API keys, spend reservation, provider-fallback structure, and request telemetry. Provider calls are stubbed and budget state is process-local; not a production gateway. <a href="https://github.com/HarshCodeK/kay-kay">Repository</a>.</li>
 
-<li><span class="role">megaproject</span> <span class="meta">Python, FastAPI</span><br>
-Application-level tool boundary that resolves paths before containment checks and exposes only read/list operations. It explicitly does not claim OS-level sandboxing. <b>3 tests.</b></li>
-
-<li><span class="role">kay-kay</span> <span class="meta">Python, FastAPI</span><br>
-Small REST gateway with provider fallback, SHA-256 API-key hashing, conservative pre-request spend reservation and request telemetry. <b>5 tests.</b></li>
-
-<li><span class="role">recoup</span> <span class="meta">Python</span><br>
-Deterministic reconciliation core using integer paise, bounded timestamp matching, one-to-one matching and a separate recovery policy gate. <b>6 tests.</b></li>
+<li><span class="role">Recoup</span> <span class="meta">Python</span><br>
+Deterministic payment reconciliation using integer paise, bounded timestamp matching, one-to-one matching, and a separate recovery-policy gate. <a href="https://github.com/HarshCodeK/recoup">Repository</a>.</li>
 </ul>
 
 <h2>Skills</h2>
 <ul>
 <li><b>Languages:</b> Python, Java, SQL</li>
-<li><b>AI systems:</b> retrieval-augmented generation, ChromaDB, local embeddings, tool-calling agents, LLM gateways, multimodal extraction, evaluation harnesses</li>
-<li><b>Backend:</b> FastAPI, REST APIs, SQLite, provider fallback, spend controls, path boundaries and trust boundaries</li>
-<li><b>Practice:</b> automated testing, CI, Docker, Git, evaluation, documented limitations</li>
+<li><b>AI systems:</b> retrieval-augmented generation, ChromaDB, local embeddings, LLM gateways, multimodal extraction, model abstention, evaluation harnesses</li>
+<li><b>Backend:</b> FastAPI, REST APIs, SQLite, input validation, provider-fallback patterns, spend controls, trust boundaries</li>
+<li><b>Engineering practice:</b> automated tests, CI, Docker, Git, load-test methodology, documented limitations</li>
 </ul>
 
 <h2>Education</h2>
 <ul>
-<li><span class="role">B.Tech, Computer Science &amp; Engineering</span> <span class="meta">DIT University, Dehradun - 2023 to 2027 - CGPA 8.80/10</span><br>
-Specialisation in Artificial Intelligence, Machine Learning and Robotics. Coursework: data structures and algorithms, DBMS, operating systems, computer networks, OOP.</li>
+<li><span class="role">B.Tech, Computer Science &amp; Engineering</span> <span class="meta">DIT University, Dehradun · 2023–2027 · CGPA 8.80/10</span><br>
+Specialisation in Artificial Intelligence, Machine Learning and Robotics. Coursework includes data structures and algorithms, DBMS, operating systems, computer networks, and object-oriented programming.</li>
 </ul>
 
-<p class="small muted" style="margin-top:22px">Test counts refer to the current repository implementations and should be rerun before submission if the repositories change.</p>
+<p class="small muted" style="margin-top:22px">All project descriptions state current implementation limits. The incident-triage extension remains under review and is not represented as merged or deployed.</p>
 </div>
 <script>console.log("Print this page to PDF with Ctrl+P / Save as PDF.");</script>
 </body>
