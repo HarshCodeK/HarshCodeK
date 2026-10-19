@@ -17,7 +17,7 @@ Tier L, domain personal product site. Stack: Static HTML/CSS/JS, Node build scri
    checks its structure only and does not run sibling-repository tests or regenerate counts.
 3. **Never invent a number.** If a figure is missing, write that it is missing.
 4. **Do not push or change GitHub settings** unless explicitly asked.
-5. **Run the gate before every commit:** `npm test && node scripts/build.js`
+5. **Run the gate before every commit:** `make gate` (currently `npm test` plus manifest-shape validation). Do not claim that this gate runs sibling-project tests or generates fresh evidence.
 6. **Money is integer arithmetic.** No float on a money path (where applicable).
 7. **No secrets in the repository.** Only `.env.example`.
 8. **One feature per commit**, conventional commit messages.
