@@ -14,7 +14,7 @@
     "tests_passed": 5,
     "tests_failed": 0,
     "verification": "pytest -q · historical snapshot; commit SHA not recorded; not re-run in this PR",
-    "ci": "workflow configured; reliability changes are in an open PR",
+    "ci": "reliability PR #4 CI passed and is merged; test count remains a historical snapshot",
     "docker": "not claimed"
   },
   {
