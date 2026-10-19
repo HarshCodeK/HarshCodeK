@@ -8,7 +8,7 @@ I build practical backend and AI software with explicit trust boundaries, reprod
 
 | Project | Engineering focus |
 |---|---|
-| [**Hybrid Log Classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) | Rules → local ML → optional LLM, explicit abstention, and incident grouping. Reliability and reproducible load-test tooling are proposed in [PR #4](https://github.com/HarshCodeK/hybrid-log-classifier/pull/4); a bounded load-report/log triage extension is proposed in [PR #5](https://github.com/HarshCodeK/hybrid-log-classifier/pull/5). Neither PR is merged into the default branch yet. |
+| [**Hybrid Log Classifier**](https://github.com/HarshCodeK/hybrid-log-classifier) | Rules → local ML → optional LLM, explicit abstention, and incident grouping. Reliability controls and reproducible client-side load-test tooling merged via [PR #4](https://github.com/HarshCodeK/hybrid-log-classifier/pull/4). A bounded load-report/log triage extension is proposed in [PR #5](https://github.com/HarshCodeK/hybrid-log-classifier/pull/5) and remains under review. |
 | [**KAY-KAY**](https://github.com/HarshCodeK/kay-kay) | LLM gateway prototype: hashed API keys, provider-fallback structure, pre-request spend reservation, and request telemetry. Provider integrations are deterministic stubs; accounting and rate limits are process-local, so this is not a production gateway. |
 | [**Recoup**](https://github.com/HarshCodeK/recoup) | Deterministic payment reconciliation using integer paise, bounded timestamp matching, one-to-one transaction matching, and a separate recovery-policy gate. It has no money-execution API and no LLM dependency. |
 
